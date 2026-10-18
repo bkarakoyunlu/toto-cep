@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0f2a24">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Toto Cep">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="ikon.png">
+<link rel="icon" type="image/png" href="ikon.png">
+<title>Toto Cep</title>
+<style>
+/* Layout: tek sütun telefon uygulaması — üstte hafta çubuğu, ortada kartlar, altta sabit sekme çubuğu (Takip · Kolonlar · Arşiv) */
+:root{
+  --bg:#f1f4f2; --panel:#ffffff; --panel2:#f6f9f7; --ink:#14201c; --muted:#5b6a64; --line:#dce4e0;
+  --hdr:#0f2a24; --hdr-ink:#e8f3ef; --accent:#0d7a5f; --accent-ink:#ffffff; --accent-soft:#e0f2eb;
+  --ok:#0d7a5f; --ok-soft:#dcf2e6; --bad:#b4232c; --bad-soft:#fbe6e7; --warn:#a85d06; --warn-soft:#fdf1df;
+  --c1:#1f5fd1; --cx:#a86e14; --c2:#c0354a; --c1s:#e6eefc; --cxs:#fbf0dc; --c2s:#fbe6ea;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0d1412; --panel:#151f1c; --panel2:#1a2623; --ink:#e4ece9; --muted:#93a39d; --line:#26342f;
+  --hdr:#08110e; --hdr-ink:#e4ece9; --accent:#2fb38c; --accent-ink:#06120e; --accent-soft:#163a30;
+  --ok:#3cc596; --ok-soft:#14352a; --bad:#f07a82; --bad-soft:#3d1c1f; --warn:#e8aa47; --warn-soft:#3a2c14;
+  --c1:#7aa6f7; --cx:#e3ab47; --c2:#f2869a; --c1s:#1b2a45; --cxs:#3a2d14; --c2s:#41202a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d1412; --panel:#151f1c; --panel2:#1a2623; --ink:#e4ece9; --muted:#93a39d; --line:#26342f;
+  --hdr:#08110e; --hdr-ink:#e4ece9; --accent:#2fb38c; --accent-ink:#06120e; --accent-soft:#163a30;
+  --ok:#3cc596; --ok-soft:#14352a; --bad:#f07a82; --bad-soft:#3d1c1f; --warn:#e8aa47; --warn-soft:#3a2c14;
+  --c1:#7aa6f7; --cx:#e3ab47; --c2:#f2869a; --c1s:#1b2a45; --cxs:#3a2d14; --c2s:#41202a; color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0}
+img{max-width:100%}
+body{background:var(--bg);color:var(--ink);font:15px/1.45 var(--font);-webkit-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--hdr)}
+button,input,select{font:inherit;color:inherit}
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--hdr);color:var(--hdr-ink);
+  padding-block:10px 10px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.hdr .r{display:flex;align-items:center;gap:8px}
+.logo{display:flex;align-items:center;gap:6px;font-weight:800;font-size:16px;letter-spacing:.01em}
+.logo i{display:inline-block;width:8px;height:8px;border-radius:2px}
+.hdr select{flex:1;min-width:0;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:var(--hdr-ink);border-radius:9px;padding:7px 8px;font-size:14px}
+.hdr select option{color:#111;background:#fff}
+.hbtn{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);color:var(--hdr-ink);border-radius:9px;padding:7px 11px;font-size:14px;font-weight:600;white-space:nowrap}
+.alt{font-size:12px;opacity:.75;margin-top:6px;display:flex;gap:10px;flex-wrap:wrap}
+main{padding-block:12px 96px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px 14px;min-width:0}
+.card h2{font-size:15px;margin:0 0 10px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;text-wrap:balance}
+.card h2 .s{font-size:12px;font-weight:500;color:var(--muted)}
+.muted{color:var(--muted)} .small{font-size:12.5px} .num{font-variant-numeric:tabular-nums}
+.btn{border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:8px 12px;font-weight:600;font-size:14px;cursor:pointer}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.bad{color:var(--bad)}
+.btn:focus-visible,.chip:focus-visible,.tab:focus-visible,.sb:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.tile{background:var(--panel2);border-radius:10px;padding:8px 10px;min-width:0}
+.tile .l{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.tile .v{font-size:22px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.2}
+.tile .v small{font-size:13px;font-weight:500;color:var(--muted)}
+.tile.ok{background:var(--ok-soft)} .tile.ok .v{color:var(--ok)}
+.chips{display:flex;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:2px}
+.chip{flex:0 0 auto;border:1px solid var(--line);background:var(--panel);border-radius:20px;padding:6px 12px;font-size:13px;cursor:pointer}
+.chip.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.k{display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:22px;border-radius:6px;padding:0 5px;font-weight:800;font-size:13px}
+.k1{background:var(--c1s);color:var(--c1)} .kX{background:var(--cxs);color:var(--cx)} .k2{background:var(--c2s);color:var(--c2)}
+.mac{display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:10px;align-items:center;padding:9px 0;border-top:1px solid var(--line)}
+.mac:first-of-type{border-top:0}
+.mac .no{color:var(--muted);font-size:12px;text-align:right;font-variant-numeric:tabular-nums}
+.mac .ad{min-width:0} .mac .ad>b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600}
+.bar{display:flex;height:6px;border-radius:4px;overflow:hidden;margin-top:5px;background:var(--line)}
+.bar i{display:block;height:100%}
+.sbs{display:flex;gap:4px}
+.sb{width:34px;height:32px;border-radius:8px;border:1px solid var(--line);background:var(--panel2);font-weight:800;cursor:pointer}
+.sb.on.s1{background:var(--c1);border-color:var(--c1);color:#fff}.sb.on.sX{background:var(--cx);border-color:var(--cx);color:#fff}.et td,.et th{padding:5px 2px}.sb.dn{outline:2px dashed var(--ink);outline-offset:-5px}.sb.on.s2{background:var(--c2);border-color:var(--c2);color:#fff}
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:6;background:var(--panel);border-top:1px solid var(--line);display:flex;
+  padding-bottom:env(safe-area-inset-bottom,0px);padding-left:max(8px,env(safe-area-inset-left,0px));padding-right:max(8px,env(safe-area-inset-right,0px))}
+.tab{flex:1;border:0;background:none;padding:9px 4px 10px;font-size:12px;font-weight:600;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer}
+.tab svg{width:22px;height:22px}
+.tab.on{color:var(--accent)}
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -2px}
+table{border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:13px;width:100%}
+th,td{padding:5px 4px;text-align:center;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:11px;color:var(--muted);font-weight:600;position:sticky;top:0;background:var(--panel)}
+td.h{width:22px;height:24px;font-weight:700;font-family:var(--mono);font-size:12px}
+td.d{background:var(--ok-soft);color:var(--ok)} td.y{background:var(--bad-soft);color:var(--bad)}
+.note{border-radius:10px;padding:10px 12px;font-size:13px;background:var(--panel2);border:1px solid var(--line)}
+.note.warn{background:var(--warn-soft);border-color:transparent;color:var(--warn)}
+.note.bad{background:var(--bad-soft);border-color:transparent;color:var(--bad)}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.sheet{position:fixed;inset:0;z-index:20;background:rgba(0,0,0,.45);display:flex;align-items:flex-end;justify-content:center}
+.sheet .in{background:var(--panel);width:100%;max-width:640px;max-height:88vh;overflow:auto;border-radius:18px 18px 0 0;
+  padding-block:16px calc(16px + env(safe-area-inset-bottom,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:12px}
+.sheet h3{margin:0;font-size:17px}
+.field{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted)}
+.field input,.field select{border:1px solid var(--line);background:var(--panel2);border-radius:9px;padding:9px 10px;font-size:15px;color:var(--ink)}
+.drop{border:2px dashed var(--line);border-radius:14px;padding:20px;text-align:center;color:var(--muted)}
+.empty{text-align:center;padding:28px 12px;color:var(--muted)}
+.empty b{display:block;color:var(--ink);font-size:16px;margin-bottom:6px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(76px + env(safe-area-inset-bottom,0px));z-index:30;background:var(--ink);color:var(--bg);padding:9px 14px;border-radius:10px;font-size:13px;max-width:90%}
+.pill{display:inline-block;border-radius:20px;padding:1px 8px;font-size:11.5px;font-weight:700}
+.pill.ok{background:var(--ok-soft);color:var(--ok)} .pill.bad{background:var(--bad-soft);color:var(--bad)} .pill.mut{background:var(--panel2);color:var(--muted)}
+.list{display:flex;flex-direction:column}
+.li{display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--line);cursor:pointer}
+.li:first-child{border-top:0}
+.li .m{flex:1;min-width:0}
+@media (prefers-reduced-motion:no-preference){.sheet .in{animation:up .18s ease-out}@keyframes up{from{transform:translateY(24px);opacity:.6}}}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <div class="r">
+    <div class="logo"><i style="background:var(--c1)"></i><i style="background:var(--cx)"></i><i style="background:var(--c2)"></i>Toto Cep</div>
+    <select id="haftaSec" aria-label="Hafta"></select>
+    <button class="hbtn" id="yenileBtn" aria-label="Yenile">⟳</button><button class="hbtn" id="ayarBtn" aria-label="Erişimler">⚙</button>
+  </div>
+  <div class="alt" id="alt"></div>
+</header>
+
+<main id="ana"></main>
+
+<nav class="tabbar" aria-label="Bölümler">
+  <button class="tab" data-t="takip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>Sonuç takibi</button>
+  <button class="tab" data-t="kolon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16M15 4v16"/></svg>Kolonlar</button>
+  <button class="tab" data-t="arsiv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16v13H4zM2 3h20v4H2zM10 12h4"/></svg>Sonuç arşivi</button>
+</nav>
+<div id="sheet" hidden></div>
+<div id="toast" class="toast" hidden></div>
+
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const tl=n=>n==null||!isFinite(n)?"—":Number(n).toLocaleString("tr-TR",{minimumFractionDigits:0,maximumFractionDigits:2})+" ₺";
+const ls=(k,v)=>{try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}};
+const KF=10, O="1X2";
+let W={},AKTIF=ls("cepHafta")||null,SEKME=ls("cepSekme")||"takip",KSEC=ls("cepKupon")||"hepsi",FILTRE="hepsi",ARA="";
+function toast(t){const e=$("#toast");e.textContent=t;e.hidden=false;clearTimeout(toast.z);toast.z=setTimeout(()=>e.hidden=true,2600)}
+
+/* ---------- erişim: kişiye özel bağlantı = dosya kimliği + şifre (adresin # kısmında, sunucuya hiç gitmez) */
+const ERK="totoErisim";
+function erisimler(){try{return JSON.parse(ls(ERK)||"[]")||[]}catch(e){return []}}
+function erisimKaydet(L){ls(ERK,JSON.stringify(L))}
+function erisimCoz(metin){const m=String(metin||"").trim().match(/([a-f0-9]{12,32})-([A-Za-z0-9]{16,64})\s*$/);return m?{id:m[1],k:m[2]}:null}
+function erisimEkle(e){const L=erisimler();if(!L.find(x=>x.id===e.id)){L.push(e);erisimKaydet(L);return true}return false}
+function erisimSorun(e){return e.durum==="sifre"?`${e.ad||"Bir bağlantı"}: şifre geçersiz (bağlantı yenilenmiş olabilir).`:e.durum==="yok"?`${e.ad||"Bir bağlantı"}: kolon dosyası bulunamadı (henüz yayınlanmamış ya da bağlantı yenilenmiş).`:e.durum==="hata"?`${e.ad||"Bir bağlantı"}: okunamadı, internet bağlantını kontrol et.`:""}
+
+/* ---------- şifre çözme: PBKDF2-SHA256 → (şifreleme anahtarı, doğrulama anahtarı); HMAC-SHA256 sayaç akışı + HMAC etiketi */
+const b64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+function bitis(...a){const o=new Uint8Array(a.reduce((x,y)=>x+y.length,0));let p=0;a.forEach(x=>{o.set(x,p);p+=x.length});return o}
+async function coz(obj,sifre){
+  if(!crypto||!crypto.subtle)throw new Error("tarayici");
+  const salt=b64(obj.salt),iv=b64(obj.iv),ct=b64(obj.ct),tag=b64(obj.tag),S=crypto.subtle;
+  const ana=await S.importKey("raw",new TextEncoder().encode(sifre),"PBKDF2",false,["deriveBits"]);
+  const bits=new Uint8Array(await S.deriveBits({name:"PBKDF2",salt,iterations:obj.iter,hash:"SHA-256"},ana,512));
+  const kE=await S.importKey("raw",bits.slice(0,32),{name:"HMAC",hash:"SHA-256"},false,["sign"]);
+  const kM=await S.importKey("raw",bits.slice(32),{name:"HMAC",hash:"SHA-256"},false,["verify"]);
+  if(!await S.verify("HMAC",kM,tag,bitis(salt,iv,ct)))throw new Error("sifre");
+  const n=Math.ceil(ct.length/32),ks=new Uint8Array(n*32);
+  for(let b=0;b<n;b+=256){const P=[];for(let i=b;i<Math.min(n,b+256);i++){const m=new Uint8Array(20);m.set(iv);new DataView(m.buffer).setUint32(16,i);P.push(S.sign("HMAC",kE,m).then(x=>ks.set(new Uint8Array(x),i*32)))}await Promise.all(P)}
+  const pt=new Uint8Array(ct.length);for(let i=0;i<ct.length;i++)pt[i]=ct[i]^ks[i];
+  return JSON.parse(new TextDecoder().decode(pt))}
+
+/* ---------- veri: herkese açık sonuçlar + şifreli ekip dosyaları */
+let SON=null,VERI={},YUKLENIYOR=false,SONHATA=null,KONTROL=null;
+async function al(yol){const r=await fetch(yol+"?t="+Date.now(),{cache:"no-store"});if(!r.ok){const e=new Error("HTTP "+r.status);e.status=r.status;throw e}return r.json()}
+function siraOf(ar){const m=String(ar||"").match(/(\d{2})\.(\d{2})\.(\d{4})/);return m?+(m[3]+m[2]+m[1]):0}
+async function yenile(sessiz){
+  if(YUKLENIYOR)return;YUKLENIYOR=true;if(!sessiz)ciz();
+  const L=erisimler();let hata=null;
+  try{SON=await al("veri/sonuclar.json")}catch(e){if(!SON)SON={haftalar:{}};hata="Sonuçlar şu an alınamadı."}
+  await Promise.all(L.map(async e=>{try{const d=await coz(await al("veri/e/"+e.id+".json"),e.k);VERI[e.id]=d;e.ad=d.baslik||e.ad;e.yayin=d.yayin;e.durum="ok"}
+    catch(err){e.durum=err.status===404?"yok":err.message==="sifre"?"sifre":"hata";if(err.status===404||err.message==="sifre")delete VERI[e.id]}}));
+  erisimKaydet(L);KONTROL=new Date();
+  const eski=JSON.stringify(W);W=kur();YUKLENIYOR=false;SONHATA=hata;
+  if(!sessiz||JSON.stringify(W)!==eski)ciz();else $("#alt").innerHTML=altSatir();
+}
+function kur(){const W2={};
+  Object.values(VERI).forEach(d=>(d.haftalar||[]).forEach(h=>{const id=h.aralik||h.ad;if(!id)return;
+    const w=W2[id]=W2[id]||{id,ad:h.aralik||h.ad,aralik:h.aralik||"",maclar:h.maclar||[],kuponlar:[],sira:siraOf(h.aralik)||0,yS:h.sonuclar,yI:h.ikramiye};
+    (h.kuponlar||[]).forEach(k=>{if(!w.kuponlar.find(x=>x.ad===k.ad))w.kuponlar.push({ad:k.ad||"Kupon",kolonlar:(k.kolonlar||[]).filter(c=>/^[1X2]{15}$/.test(c))})})}));
+  Object.values(W2).forEach(w=>{const r=SON&&SON.haftalar&&SON.haftalar[w.aralik];
+    if(r&&r.maclar&&r.maclar.length>=15){w.sonuclar=r.maclar.slice(0,15).map(m=>m.sonuc||null);w.durum=r.maclar.map(m=>m.durum||"");w.tarih=r.maclar.map(m=>m.tarih||"");
+      w.ikramiye={};(r.ikramiye||[]).forEach(x=>{w.ikramiye[x.bilen]=x.kazanc});w.guncel=r.guncel}
+    else{w.sonuclar=Array.from({length:15},(_,i)=>(w.yS||[])[i]||null);w.ikramiye=w.yI||{}}
+    delete w.yS;delete w.yI;
+    if(!w.maclar.some(Boolean)&&r)w.maclar=r.maclar.map(m=>m.ad)});
+  return W2}
+function saat(d){return d?d.toLocaleTimeString("tr-TR",{hour:"2-digit",minute:"2-digit"}):""}
+function durumMetni(){const w=hafta();const sorun=erisimler().filter(e=>e.durum&&e.durum!=="ok").length;
+  return YUKLENIYOR?"güncelleniyor…":SONHATA?SONHATA:[w&&w.guncel?`sonuç: ${w.guncel.slice(11)}`:"",KONTROL?`kontrol ${saat(KONTROL)}`:"",sorun?`⚠ ${sorun} bağlantı sorunlu`:""].filter(Boolean).join(" · ")}
+function altSatir(){const w=hafta();return w?`<span>${esc(w.aralik||"")}</span><span>${kuponlar(w).length} ekip · ${kuponlar(w).reduce((a,k)=>a+k.kolonlar.length,0)} kolon</span><span>${durumMetni()}</span>`:`<span>${durumMetni()}</span>`}
+function macDurum(w,i){const d=(w.durum||[])[i]||"",t=(w.tarih||[])[i]||"";return esc(d?d.replace(" / "," · "):t?t:"")}
+
+/* ---------- hesaplar */
+function hafta(){return AKTIF&&W[AKTIF]||null}
+function kuponlar(w){return w.kuponlar||[]}
+function secili(w){const K=kuponlar(w);return KSEC==="hepsi"||!K.find(k=>k.ad===KSEC)?K:K.filter(k=>k.ad===KSEC)}
+function kolonOz(c,son){let d=0,y=0;for(let i=0;i<15;i++){if(son[i]){c[i]===son[i]?d++:y++}}return {d,y,tavan:15-y}}
+function ozet(K,son){const biten=son.filter(Boolean).length;let n=0,en=0,t12=0,t13=0,bilen={};
+  K.forEach(k=>k.kolonlar.forEach(c=>{n++;const o=kolonOz(c,son);en=Math.max(en,o.d);if(o.tavan>=12)t12++;if(o.tavan>=13)t13++;if(biten===15&&o.d>=12)bilen[o.d]=(bilen[o.d]||0)+1}));
+  return {n,biten,en,t12,t13,bilen,tavan:Math.max(0,...K.flatMap(k=>k.kolonlar.map(c=>kolonOz(c,son).tavan)))}}
+function kazanc(w,bilen){const ik=w.ikramiye||{};if(!Object.keys(ik).length)return null;let t=0;Object.entries(bilen).forEach(([b,n])=>{if(ik[b]!=null&&ik[b]!=="")t+=n*Number(ik[b])});return t}
+
+/* ---------- çizim */
+function ciz(){
+  const sel=$("#haftaSec");const ids=Object.keys(W).sort((a,b)=>(W[b].sira||0)-(W[a].sira||0));
+  if(AKTIF&&!W[AKTIF])AKTIF=null;if(!AKTIF&&ids.length)AKTIF=ids[0];
+  sel.innerHTML=ids.length?ids.map(id=>`<option value="${esc(id)}" ${id===AKTIF?"selected":""}>${esc(W[id].ad||W[id].aralik||"Hafta")}</option>`).join(""):'<option>Hafta yok</option>';
+  document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("on",t.dataset.t===SEKME));
+  const w=hafta();
+  $("#alt").innerHTML=w?`<span>${esc(w.aralik||"")}</span><span>${kuponlar(w).length} ekip · ${kuponlar(w).reduce((a,k)=>a+k.kolonlar.length,0)} kolon</span><span>${durumMetni()}</span>`:`<span>${durumMetni()}</span>`;
+  const a=$("#ana");
+  if(!w&&SEKME!=="arsiv"){a.innerHTML=bosEkran();return}
+  a.innerHTML=SEKME==="takip"?takipEkran(w):SEKME==="kolon"?kolonEkran(w):arsivEkran();
+}
+function bosEkran(){const L=erisimler();
+  if(YUKLENIYOR&&!Object.keys(W).length)return `<div class="card empty"><b>Yükleniyor…</b>Kolonlar ve sonuçlar getiriliyor.</div>`;
+  if(!L.length)return `<div class="card empty"><b>Hoş geldin</b>Bu sayfa sana gönderilen kişiye özel bağlantıyla açılır. Bağlantıyı aç ya da aşağıya yapıştır.
+    <div class="row" style="margin-top:14px;justify-content:center"><input id="kodGir" class="btn" style="flex:1;min-width:0;font-weight:400" placeholder="Bağlantıyı yapıştır"><button class="btn pri" id="kodEkle">Ekle</button></div></div>`;
+  const sorun=L.filter(e=>e.durum&&e.durum!=="ok");
+  return `<div class="card empty"><b>Henüz yayınlanmış kolon yok</b>${sorun.length?sorun.map(e=>esc(erisimSorun(e))).join("<br>"):"Bilgisayardaki Toto Masası'nda <b>Sonuç takibi → 📱 Telefona yayınla</b> ile kolonlar buraya gelir."}</div>`}
+function kupSecici(w){const K=kuponlar(w);return K.length>1?`<div class="chips">${["hepsi",...K.map(k=>k.ad)].map(a=>`<button class="chip ${(KSEC==="hepsi"?"hepsi":KSEC)===a||(a==="hepsi"&&!K.find(k=>k.ad===KSEC))?"on":""}" data-k="${esc(a)}">${a==="hepsi"?`Hepsi (${K.length})`:esc(a)}</button>`).join("")}</div>`:""}
+/* ---------- senaryolar: deneme modu, maç maç etki, tüm kombinasyonlar */
+let DENEME=null,SEN={};
+function birlesik(w){const s=(w.sonuclar||Array(15).fill(null)).slice();if(DENEME)DENEME.forEach((x,i)=>{if(x&&!s[i])s[i]=x});return s}
+function etki(K,son){const cs=K.flatMap(k=>k.kolonlar),yan=cs.map(c=>kolonOz(c,son).y),R=[];
+  son.forEach((s,i)=>{if(s)return;const v=[..."1X2"].map(o=>{let t12=0,t13=0,tav=0;cs.forEach((c,j)=>{const t=15-yan[j]-(c[i]===o?0:1);if(t>=12)t12++;if(t>=13)t13++;if(t>tav)tav=t});return {o,t12,t13,tav}});
+    R.push({i,v,fark:Math.max(...v.map(x=>x.t12))-Math.min(...v.map(x=>x.t12))})});return R}
+function senaryoAnahtar(w,son){return w.id+"|"+KSEC+"|"+son.map(x=>x||"-").join("")}
+function senaryoHesapla(K,son){
+  const kal=son.map((s,i)=>s?-1:i).filter(i=>i>=0),k=kal.length,m=new Map();
+  K.forEach(kp=>kp.kolonlar.forEach(c=>{const d0=kolonOz(c,son).d,p=kal.map(i=>c[i]).join("");if(!(m.get(p)>=d0))m.set(p,d0)}));
+  const P=[...m].map(([p,d0])=>({a:[...p].map(x=>O.indexOf(x)),d0})).sort((a,b)=>b.d0-a.d0);
+  const toplam=3**k,ornek=toplam*P.length*Math.max(k,1)>4e7,n=ornek?20000:toplam,dag={},s=new Array(k);let enKotu=null;
+  for(let t=0;t<n;t++){
+    if(ornek){for(let j=0;j<k;j++)s[j]=Math.floor(Math.random()*3)}else{let x=t;for(let j=0;j<k;j++){s[j]=x%3;x=(x/3)|0}}
+    let best=0;for(const q of P){if(q.d0+k<=best)break;let d=q.d0;const a=q.a;for(let j=0;j<k;j++)if(a[j]===s[j])d++;if(d>best){best=d;if(best===15)break}}
+    dag[best]=(dag[best]||0)+1;if(!enKotu||best<enKotu.b)enKotu={b:best,s:s.slice()}}
+  const bq=P.reduce((a,q)=>q.d0>a.d0?q:a,P[0]);
+  return {k,kal,n,ornek,dag,enIyi:{b:bq.d0+k,s:bq.a.slice()},enKotu}}
+function senaryoKart(w,K,son){const kal=son.filter(x=>!x).length;if(!kal||!K.length)return "";
+  const r=SEN[senaryoAnahtar(w,son)];
+  let h=`<div class="card"><h2>Senaryolar<span class="s">kalan ${kal} maçın bütün sonuç dizileri</span></h2>`;
+  if(!r)return h+`<div class="small muted" style="margin-bottom:10px">${kal} maç kaldı, yani ${(3**kal).toLocaleString("tr-TR")} farklı sonuç dizisi var. Her birinde en iyi kolonunun kaç bildiği sayılır.</div><button class="btn pri" id="senBtn">Senaryoları hesapla</button></div>`;
+  const ge=b=>Object.entries(r.dag).filter(([d])=>+d>=b).reduce((a,[,n])=>a+n,0),pct=x=>{const p=100*x/r.n;return p>0&&p<1?"<1":Math.round(p)};
+  const yol=x=>x.s.map((v,j)=>`<span style="display:inline-flex;flex-direction:column;align-items:center;gap:1px"><span class="small muted num">${r.kal[j]+1}</span><span class="k k${O[v]}">${O[v]}</span></span>`).join("");
+  return h+`<div class="tiles">${[15,14,13,12].map(b=>`<div class="tile ${ge(b)?"ok":""}"><div class="l">${b}${b<15?"+":""} bilinen dizi</div><div class="v">%${pct(ge(b))}</div><div class="small muted num">${ge(b).toLocaleString("tr-TR")} / ${r.n.toLocaleString("tr-TR")}${r.ornek?" deneme":""}</div></div>`).join("")}</div>
+    <div style="margin-top:12px;display:grid;gap:10px">
+      <div><div class="small"><b>En iyi yol</b> · en iyi kolon <b>${r.enIyi.b}</b> bilir</div><div class="row" style="gap:4px;margin-top:4px">${yol(r.enIyi)}</div></div>
+      <div><div class="small"><b>En kötü yol</b> · en iyi kolon <b>${r.enKotu.b}</b> bilir</div><div class="row" style="gap:4px;margin-top:4px">${yol(r.enKotu)}</div></div></div>
+    <div class="small muted" style="margin-top:10px">Her sonuç eşit sayılır, favori/sürpriz farkı yoktur: yüzde "kaç ihtimalde" demektir, gerçek olasılık değildir.${r.ornek?" Dizi sayısı çok fazla olduğu için 20.000 rastgele dizi denendi; en kötü yol yaklaşıktır.":""}</div></div>`}
+function etkiKart(w,K,son){if(!K.length)return "";const E=etki(K,son);if(!E.length)return "";E.sort((a,b)=>b.fark-a.fark||a.i-b.i);
+  return `<div class="card"><h2>Maç maç etkisi<span class="s">en kritik maç üstte</span></h2><div class="tbl"><table class="et"><thead><tr><th style="text-align:left">Maç</th><th><span class="k k1">1</span></th><th><span class="k kX">X</span></th><th><span class="k k2">2</span></th></tr></thead><tbody>
+    ${E.map(e=>`<tr><td style="text-align:left;max-width:84px;overflow:hidden;text-overflow:ellipsis;padding-right:6px">${e.i+1}. ${esc((w.maclar||[])[e.i]||"")}</td>${e.v.map(x=>`<td style="background:var(${x.t12?"--ok-soft":"--bad-soft"})"><b style="color:var(${x.t12?"--ok":"--bad"});font-size:15px">${x.t12}</b><div class="muted" style="font-size:11px">13+ ${x.t13} · T${x.tav}</div></td>`).join("")}</tr>`).join("")}
+    </tbody></table></div><div class="small muted" style="margin-top:6px">Büyük sayı: o sonuç gelirse 12+ şansı kalan kolon sayısı. 13+: 13 şansı kalan. T: tavan. Kritik maç: sonuca göre farkın en büyük olduğu maç.</div></div>`}
+function takipEkran(w){
+  const son=birlesik(w),gercek=w.sonuclar||Array(15).fill(null),K=secili(w),o=ozet(K,son),tut=o.n*KF,kz=o.biten===15?kazanc(w,o.bilen):null;
+  let h=kupSecici(w);
+  h+=`<div class="card"><h2>${esc(KSEC==="hepsi"||K.length>1?"Tüm ekipler":K[0].ad)}<span class="s num">${o.n} kolon · ${tl(tut)}</span></h2>
+    <div class="tiles">
+      <div class="tile ${o.biten&&o.en>=12?"ok":""}"><div class="l">Şu an en iyi</div><div class="v">${o.biten?o.en:"—"}<small> / ${o.biten}</small></div><div class="small muted">biten maç ${o.biten}/15</div></div>
+      <div class="tile"><div class="l">Tavan</div><div class="v">${o.tavan}</div><div class="small muted">en iyi kolonun ulaşabileceği</div></div>
+      <div class="tile ${o.t12?"ok":""}"><div class="l">12+ şansı olan</div><div class="v">${o.t12}<small> kolon</small></div><div class="small muted">13+ şansı: ${o.t13}</div></div>
+      <div class="tile"><div class="l">${o.biten===15?"Kazanç":"Kalan maç"}</div><div class="v">${o.biten===15?(kz!=null?tl(kz):"—"):15-o.biten}</div><div class="small muted">${o.biten===15?(kz!=null?`net ${tl(kz-tut)}`:"ikramiye bekleniyor"):"sonuç bekleniyor"}</div></div>
+    </div>
+    ${o.biten===15&&Object.keys(o.bilen).length?`<div class="small" style="margin-top:10px">Bilen: ${Object.entries(o.bilen).sort((a,b)=>b[0]-a[0]).map(([b,n])=>`<b>${b}</b> bilen ×${n}`).join(" · ")}</div>`:""}
+    ${K.length>1?`<div class="small muted" style="margin-top:10px;display:grid;gap:3px">${K.map(k=>{const x=ozet([k],son);return `<div class="row" style="justify-content:space-between"><span>${esc(k.ad)}</span><span class="num">${k.kolonlar.length} kolon · en iyi ${x.biten?x.en:"—"} · 12+ şansı ${x.t12}</span></div>`}).join("")}</div>`:""}
+  </div>`;
+  if(DENEME)h+=`<div class="note warn row" style="justify-content:space-between"><span><b>Deneme modu açık.</b> İşaretlediğin sonuçlar kaydedilmez, sadece "ya böyle olursa" hesaplanır.</span><button class="btn" id="denKapat">Kapat</button></div>`;
+  h+=senaryoKart(w,K,son)+etkiKart(w,K,son);
+  /* maçlar + sonuç girişi + hangi sonuç daha iyi */
+  const alive=K.flatMap(k=>k.kolonlar).filter(c=>kolonOz(c,son).tavan>=12);
+  h+=`<div class="card"><h2>Maçlar ve sonuçlar<span class="s">sonuçlar otomatik gelir</span></h2>
+    <div class="row" style="margin-bottom:6px"><button class="btn" id="denAc">${DENEME?"🧪 Denemeyi kapat":"🧪 Ya böyle olursa?"}</button></div>
+    ${(w.maclar||Array(15).fill("")).map((ad,i)=>{
+      const dag=[0,0,0],al=[0,0,0];let n=0;K.forEach(k=>k.kolonlar.forEach(c=>{dag[O.indexOf(c[i])]++;n++}));alive.forEach(c=>al[O.indexOf(c[i])]++);
+      const s=son[i],tut=s&&n?dag[O.indexOf(s)]/n:null;
+      const iyi=!s&&alive.length?O[al.indexOf(Math.max(...al))]:null;
+      return `<div class="mac"><div class="no">${i+1}</div><div class="ad"><b>${esc(ad||`${i+1}. maç`)}</b><div class="small muted">${macDurum(w,i)}</div>
+        <div class="small muted">${s?`kolonların <b class="${tut>=.5?"":""}" style="color:var(${tut>=.5?"--ok":"--bad"})">%${Math.round(tut*100)}</b> tuttu`:iyi?`12+ için en çok <span class="k k${iyi}" style="height:18px;min-width:20px;font-size:11px">${iyi}</span> gelmeli (${al[O.indexOf(iyi)]} kolon)`:"—"}</div>
+        ${n?`<div class="bar"><i style="width:${100*dag[0]/n}%;background:var(--c1)"></i><i style="width:${100*dag[1]/n}%;background:var(--cx)"></i><i style="width:${100*dag[2]/n}%;background:var(--c2)"></i></div>`:""}</div>
+        <div class="sbs">${[..."1X2"].map(x=>`<button class="sb s${x} ${s===x?"on":""} ${DENEME&&!gercek[i]&&DENEME[i]===x?"dn":""}" data-i="${i}" data-o="${x}" aria-label="${i+1}. maç ${x}">${x}</button>`).join("")}</div></div>`}).join("")}
+    <div class="small muted" style="margin-top:8px">Çubuk: kolonlarında 1 / X / 2 oranı. "12+ için" ipucu, hâlâ 12 bilme şansı olan kolonlara göre.</div></div>`;
+  return h}
+function kolonEkran(w){
+  const son=birlesik(w),K=secili(w);let R=[];
+  K.forEach(k=>k.kolonlar.forEach((c,j)=>{const o=kolonOz(c,son);R.push({ad:k.ad,no:j+1,c,...o})}));
+  if(FILTRE==="12")R=R.filter(r=>r.tavan>=12);if(FILTRE==="13")R=R.filter(r=>r.tavan>=13);
+  if(ARA){const q=ARA.toUpperCase().replace(/\s/g,"");R=R.filter(r=>("K"+r.no)===q||r.c.includes(q))}
+  R.sort((a,b)=>b.d-a.d||b.tavan-a.tavan||a.no-b.no);
+  const goster=R.slice(0,300);
+  return `${kupSecici(w)}<div class="card"><div class="row" style="margin-bottom:10px">
+      <select id="filtre" class="btn" aria-label="Filtre"><option value="hepsi" ${FILTRE==="hepsi"?"selected":""}>Tüm kolonlar</option><option value="12" ${FILTRE==="12"?"selected":""}>12+ şansı olanlar</option><option value="13" ${FILTRE==="13"?"selected":""}>13+ şansı olanlar</option></select>
+      <input id="ara" class="btn" style="flex:1;min-width:120px;font-weight:400" placeholder="Ara: K15 ya da 1X2…" value="${esc(ARA)}"></div>
+    <div class="small muted" style="margin-bottom:6px">${R.length} kolon${R.length>300?" · ilk 300 gösteriliyor":""} · en çok doğru bilen üstte</div>
+    <div class="tbl"><table><thead><tr><th>Kolon</th>${Array.from({length:15},(_,i)=>`<th>${i+1}</th>`).join("")}<th>D</th><th>Tavan</th></tr></thead><tbody>
+    ${goster.map(r=>`<tr><td style="text-align:left">${K.length>1?`<span class="muted small">${esc(r.ad)} </span>`:""}K${r.no}</td>${[...r.c].map((x,i)=>`<td class="h ${son[i]?(son[i]===x?"d":"y"):""}">${x}</td>`).join("")}<td><b>${r.d}</b></td><td style="color:var(${r.tavan>=12?"--ok":"--muted"})">${r.tavan}</td></tr>`).join("")}
+    </tbody></table></div></div>`}
+function arsivEkran(){
+  const ids=Object.keys(W).sort((a,b)=>(W[b].sira||0)-(W[a].sira||0));
+  if(!ids.length)return bosEkran();
+  return `<div class="card"><h2>Sonuç arşivi<span class="s">${ids.length} hafta</span></h2><div class="list">${ids.map(id=>{const w=W[id],son=w.sonuclar||[],o=ozet(kuponlar(w),son),tut=o.n*KF,kz=o.biten===15?kazanc(w,o.bilen):null;
+    return `<div class="li" data-h="${esc(id)}"><div class="m"><b>${esc(w.ad||w.aralik)}</b><div class="small muted num">${kuponlar(w).map(k=>esc(k.ad)).join(", ")} · ${o.n} kolon · ${tl(tut)}</div>
+      <div class="small num">${o.biten===15?`en iyi <b>${o.en}</b>${Object.keys(o.bilen).length?" · "+Object.entries(o.bilen).sort((a,b)=>b[0]-a[0]).map(([b,n])=>`${b} bilen ×${n}`).join(", "):""}`:`${o.biten}/15 maç bitti · en iyi ${o.biten?o.en:"—"}`}</div></div>
+      <div style="text-align:right">${o.biten===15?(kz!=null?`<span class="pill ${kz>=tut?"ok":"bad"}">${kz>=tut?"+":""}${tl(kz-tut)}</span>`:'<span class="pill mut">bitti</span>'):'<span class="pill mut">sürüyor</span>'}</div></div>`}).join("")}</div></div>
+    `}
+
+/* ---------- etkileşim */
+document.addEventListener("click",async e=>{
+  const t=e.target.closest("button,.li");if(!t)return;
+  if(t.classList.contains("tab")){SEKME=t.dataset.t;ls("cepSekme",SEKME);ciz();window.scrollTo(0,0);return}
+  if(t.classList.contains("chip")){KSEC=t.dataset.k;ls("cepKupon",KSEC);ciz();return}
+  if(t.classList.contains("li")){AKTIF=t.dataset.h;DENEME=null;ls("cepHafta",AKTIF);SEKME="takip";ls("cepSekme",SEKME);ciz();window.scrollTo(0,0);return}
+  if(t.id==="denAc"||t.id==="denKapat"){DENEME=DENEME?null:Array(15).fill(null);ciz();return}
+  if(t.id==="senBtn"){const w=hafta(),son=birlesik(w),K=secili(w);t.disabled=true;t.textContent="Hesaplanıyor…";setTimeout(()=>{SEN[senaryoAnahtar(w,son)]=senaryoHesapla(K,son);ciz()},30);return}
+  if(t.classList.contains("sb")&&DENEME){const w=hafta(),i=+t.dataset.i,o=t.dataset.o;if((w.sonuclar||[])[i]){toast("Bu maçın gerçek sonucu girili; deneme sadece biten olmayan maçlarda.");return}DENEME[i]=DENEME[i]===o?null:o;ciz();return}
+  if(t.classList.contains("sb")){toast("Sonuçlar Nesine'den otomatik geliyor. Denemek için 🧪 Ya böyle olursa?");return}
+  if(t.classList.contains("sb_eski")){const w=hafta(),i=+t.dataset.i,o=t.dataset.o;w.sonuclar=w.sonuclar||Array(15).fill(null);w.sonuclar[i]=w.sonuclar[i]===o?null:o;ciz();await kaydet(w);return}
+});
+$("#haftaSec").onchange=e=>{AKTIF=e.target.value;DENEME=null;ls("cepHafta",AKTIF);ciz()};
+$("#yenileBtn").onclick=()=>{yenile(false);toast("Yenileniyor…")};
+$("#ayarBtn").onclick=()=>ayarAc();
+document.addEventListener("change",e=>{if(e.target.id==="filtre"){FILTRE=e.target.value;ciz()}});
+document.addEventListener("input",e=>{if(e.target.id==="ara"){ARA=e.target.value.trim();clearTimeout(ARA.z);const p=e.target.selectionStart;ciz();const n=$("#ara");if(n){n.focus();try{n.setSelectionRange(p,p)}catch(_){}}}});
+
+/* ---------- alt sayfalar (sheet) */
+function sheet(html){const s=$("#sheet");s.innerHTML=`<div class="sheet" id="sh"><div class="in">${html}</div></div>`;s.hidden=false;
+  $("#sh").onclick=e=>{if(e.target.id==="sh")kapat()}}
+function kapat(){$("#sheet").hidden=true;$("#sheet").innerHTML=""}
+function ayarAc(){const L=erisimler();sheet(`<h3>Erişimler</h3>
+  <div class="small muted">Bu cihazda kayıtlı kişiye özel bağlantılar. Kolonlar şifreli saklanır; şifre sadece bu bağlantıda ve bu telefonda bulunur.</div>
+  <div class="list">${L.length?L.map((e,j)=>`<div class="li" style="cursor:default"><div class="m"><b>${esc(e.ad||"Bağlantı")}</b><div class="small ${e.durum==="ok"?"muted":""}" style="${e.durum&&e.durum!=="ok"?"color:var(--bad)":""}">${e.durum==="ok"?(e.yayin?`son yayın ${esc(e.yayin)}`:"çalışıyor"):esc(erisimSorun(e))||"henüz kontrol edilmedi"}</div></div><button class="btn bad" data-sil="${j}">Kaldır</button></div>`).join(""):'<div class="muted small">Kayıtlı bağlantı yok.</div>'}</div>
+  <label class="field">Yeni bağlantı ekle<input id="kodGir2" placeholder="Bağlantıyı yapıştır"></label>
+  <div class="small muted">Sonuçlar Nesine'den yaklaşık 15 dakikada bir otomatik güncellenir; sayfa açıkken 2 dakikada bir kontrol eder.</div>
+  <div class="row" style="justify-content:flex-end"><button class="btn" onclick="kapat()">Kapat</button><button class="btn pri" id="kodEkle2">Ekle</button></div>`);
+  document.querySelectorAll("[data-sil]").forEach(b=>b.onclick=()=>{const L2=erisimler(),e=L2.splice(+b.dataset.sil,1)[0];erisimKaydet(L2);if(e)delete VERI[e.id];W=kur();ayarAc();ciz()});
+  $("#kodEkle2").onclick=()=>kodEkle($("#kodGir2").value)}
+function kodEkle(v){const e=erisimCoz(v);if(!e){toast("Bu bir Toto Cep bağlantısı değil.");return}
+  if(erisimEkle(e))toast("Bağlantı eklendi.");else toast("Bu bağlantı zaten kayıtlı.");kapat();yenile(false)}
+document.addEventListener("click",e=>{if(e.target.id==="kodEkle")kodEkle($("#kodGir").value)});
+
+(function(){const e=erisimCoz(decodeURIComponent(location.hash.slice(1)));if(e)erisimEkle(e)})();
+window.addEventListener("hashchange",()=>{const e=erisimCoz(decodeURIComponent(location.hash.slice(1)));if(e&&erisimEkle(e))yenile(false)});
+document.addEventListener("visibilitychange",()=>{if(!document.hidden&&(!KONTROL||Date.now()-KONTROL>60000))yenile(true)});
+setInterval(()=>{if(!document.hidden)yenile(true)},120000);
+yenile(false);
+
+</script>
+</body>
+</html>
