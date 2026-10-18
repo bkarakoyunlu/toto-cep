@@ -1,0 +1,3417 @@
+{
+"guncel": "2026-10-18 03:22",
+"kaynak": "nesine.com/sportoto",
+"haftalar": {
+"16.10.2026 - 19.10.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "16.10.2026 20:00",
+"ad": "Çorum FK-Çaykur Rizespor A.Ş.",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 2,
+"tarih": "17.10.2026 13:30",
+"ad": "Erzurumspor FK-Eyüpspor",
+"durum": "Bitti / 2-0",
+"sonuc": "1"
+},
+{
+"no": 3,
+"tarih": "17.10.2026 16:00",
+"ad": "Amed Sportif Faaliyetler-Konyaspor",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 4,
+"tarih": "17.10.2026 16:00",
+"ad": "Gençlerbirliği-Galatasaray A.Ş.",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+},
+{
+"no": 5,
+"tarih": "17.10.2026 19:00",
+"ad": "Fenerbahçe A.Ş.-Alanyaspor",
+"durum": "Bitti / 3-0",
+"sonuc": "1"
+},
+{
+"no": 6,
+"tarih": "18.10.2026 13:30",
+"ad": "Kasımpaşa A.Ş.-Samsunspor A.Ş.",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 7,
+"tarih": "18.10.2026 16:00",
+"ad": "Kocaelispor-Göztepe A.Ş.",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 8,
+"tarih": "18.10.2026 19:00",
+"ad": "Başakşehir FK-Gaziantep FK A.Ş.",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 9,
+"tarih": "19.10.2026 20:00",
+"ad": "Trabzonspor A.Ş.-Beşiktaş A.Ş.",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 10,
+"tarih": "17.10.2026 14:30",
+"ad": "Everton-Chelsea",
+"durum": "Bitti / 0-2",
+"sonuc": "2"
+},
+{
+"no": 11,
+"tarih": "17.10.2026 17:00",
+"ad": "Brentford-Liverpool",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 12,
+"tarih": "17.10.2026 19:30",
+"ad": "Real Betis-Barcelona",
+"durum": "Bitti / 2-5",
+"sonuc": "2"
+},
+{
+"no": 13,
+"tarih": "18.10.2026 22:00",
+"ad": "Real Madrid-Sevilla",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 14,
+"tarih": "18.10.2026 19:00",
+"ad": "AC Milan-Atalanta",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 15,
+"tarih": "18.10.2026 21:45",
+"ad": "Juventus-Lazio",
+"durum": "",
+"sonuc": null
+}
+],
+"ikramiye": [],
+"guncel": "2026-10-18 03:22"
+},
+"09.10.2026 - 12.10.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "09.10.2026 20:00",
+"ad": "Galatasaray A.Ş.-Kasımpaşa A.Ş.",
+"durum": "Bitti / 3-1",
+"sonuc": "1"
+},
+{
+"no": 2,
+"tarih": "10.10.2026 13:30",
+"ad": "Gençlerbirliği-Amed Sportif Faaliyetler",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+},
+{
+"no": 3,
+"tarih": "10.10.2026 16:00",
+"ad": "Alanyaspor-Erzurumspor FK",
+"durum": "Bitti / 0-0",
+"sonuc": "X"
+},
+{
+"no": 4,
+"tarih": "10.10.2026 16:00",
+"ad": "Samsunspor A.Ş.-Trabzonspor A.Ş.",
+"durum": "Bitti / 0-3",
+"sonuc": "2"
+},
+{
+"no": 5,
+"tarih": "10.10.2026 19:00",
+"ad": "Çaykur Rizespor A.Ş.-Fenerbahçe A.Ş.",
+"durum": "Bitti / 0-3",
+"sonuc": "2"
+},
+{
+"no": 6,
+"tarih": "11.10.2026 13:30",
+"ad": "Konyaspor-Başakşehir FK",
+"durum": "Bitti / 0-0",
+"sonuc": "X"
+},
+{
+"no": 7,
+"tarih": "11.10.2026 16:00",
+"ad": "Gaziantep FK A.Ş.-Çorum FK",
+"durum": "Bitti / 0-3",
+"sonuc": "2"
+},
+{
+"no": 8,
+"tarih": "11.10.2026 19:00",
+"ad": "Beşiktaş A.Ş.-Kocaelispor",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 9,
+"tarih": "12.10.2026 20:00",
+"ad": "Eyüpspor-Göztepe A.Ş.",
+"durum": "Bitti / 0-4",
+"sonuc": "2"
+},
+{
+"no": 10,
+"tarih": "10.10.2026 16:30",
+"ad": "Augsburg-Bayern Münih",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+},
+{
+"no": 11,
+"tarih": "10.10.2026 19:30",
+"ad": "Leipzig-Eintracht Frankfurt",
+"durum": "Bitti / 6-0",
+"sonuc": "1"
+},
+{
+"no": 12,
+"tarih": "10.10.2026 19:30",
+"ad": "Manchester United-Tottenham",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 13,
+"tarih": "11.10.2026 18:30",
+"ad": "Liverpool-Manchester City",
+"durum": "Bitti / 0-3",
+"sonuc": "2"
+},
+{
+"no": 14,
+"tarih": "10.10.2026 22:00",
+"ad": "Real Madrid-Villarreal",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 15,
+"tarih": "11.10.2026 13:30",
+"ad": "Como 1907-AS Roma",
+"durum": "Bitti / 0-0",
+"sonuc": "X"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 29,
+"kazanc": 1457880.74
+},
+{
+"bilen": 14,
+"adet": 1068,
+"kazanc": 22620.94
+},
+{
+"bilen": 13,
+"adet": 13576,
+"kazanc": 1779.54
+},
+{
+"bilen": 12,
+"adet": 98413,
+"kazanc": 306.85
+}
+],
+"guncel": "2026-10-18 03:22"
+},
+"02.10.2026 - 05.10.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "02.10.2026 21:45",
+"ad": "Belçika-Türkiye",
+"durum": "Bitti / 3-0",
+"sonuc": "1"
+},
+{
+"no": 2,
+"tarih": "05.10.2026 21:45",
+"ad": "İtalya-Türkiye",
+"durum": "Bitti / 3-1",
+"sonuc": "1"
+},
+{
+"no": 3,
+"tarih": "02.10.2026 21:45",
+"ad": "Bosna Hersek-İsveç",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 4,
+"tarih": "02.10.2026 21:45",
+"ad": "Fransa-İtalya",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 5,
+"tarih": "02.10.2026 21:45",
+"ad": "Macaristan-Gürcistan",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 6,
+"tarih": "02.10.2026 21:45",
+"ad": "Polonya-Romanya",
+"durum": "Bitti / 6-0",
+"sonuc": "1"
+},
+{
+"no": 7,
+"tarih": "03.10.2026 19:00",
+"ad": "Hırvatistan-İngiltere",
+"durum": "Bitti / 0-7",
+"sonuc": "2"
+},
+{
+"no": 8,
+"tarih": "03.10.2026 21:45",
+"ad": "Kuzey Makedonya-İskoçya",
+"durum": "Bitti / 0-2",
+"sonuc": "2"
+},
+{
+"no": 9,
+"tarih": "03.10.2026 21:45",
+"ad": "İspanya-Çekya",
+"durum": "Bitti / 3-1",
+"sonuc": "1"
+},
+{
+"no": 10,
+"tarih": "03.10.2026 21:45",
+"ad": "İsviçre-Slovenya",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 11,
+"tarih": "04.10.2026 21:45",
+"ad": "Galler-Danimarka",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+},
+{
+"no": 12,
+"tarih": "04.10.2026 21:45",
+"ad": "Hollanda-Sırbistan",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 13,
+"tarih": "04.10.2026 21:45",
+"ad": "Portekiz-Norveç",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 14,
+"tarih": "04.10.2026 21:45",
+"ad": "Yunanistan-Almanya",
+"durum": "Bitti / 0-0",
+"sonuc": "X"
+},
+{
+"no": 15,
+"tarih": "05.10.2026 21:45",
+"ad": "Fransa-Belçika",
+"durum": "Bitti / 4-1",
+"sonuc": "1"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 2580,
+"kazanc": 11080.76
+},
+{
+"bilen": 14,
+"adet": 39156,
+"kazanc": 417.2
+},
+{
+"bilen": 13,
+"adet": 244768,
+"kazanc": 66.74
+},
+{
+"bilen": 12,
+"adet": 868463,
+"kazanc": 23.51
+}
+],
+"guncel": "2026-10-18 03:22"
+},
+"25.09.2026 - 28.09.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "25.09.2026 21:45",
+"ad": "Türkiye-Fransa",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+},
+{
+"no": 2,
+"tarih": "28.09.2026 21:45",
+"ad": "Türkiye-İtalya",
+"durum": "Bitti / 1-4",
+"sonuc": "2"
+},
+{
+"no": 3,
+"tarih": "25.09.2026 21:45",
+"ad": "İsveç-Romanya",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 4,
+"tarih": "25.09.2026 21:45",
+"ad": "İtalya-Belçika",
+"durum": "Bitti / 0-2",
+"sonuc": "2"
+},
+{
+"no": 5,
+"tarih": "26.09.2026 16:00",
+"ad": "Slovenya-İskoçya",
+"durum": "Bitti / 0-0",
+"sonuc": "X"
+},
+{
+"no": 6,
+"tarih": "26.09.2026 19:00",
+"ad": "Bulgaristan-Lüksemburg",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 7,
+"tarih": "26.09.2026 21:45",
+"ad": "Kuzey Makedonya-İsviçre",
+"durum": "Bitti / 0-3",
+"sonuc": "2"
+},
+{
+"no": 8,
+"tarih": "26.09.2026 21:45",
+"ad": "Çekya-Hırvatistan",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 9,
+"tarih": "26.09.2026 21:45",
+"ad": "İngiltere-İspanya",
+"durum": "Bitti / 2-3",
+"sonuc": "2"
+},
+{
+"no": 10,
+"tarih": "27.09.2026 16:00",
+"ad": "Litvanya-Azerbaycan",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 11,
+"tarih": "27.09.2026 19:00",
+"ad": "Avusturya-Kosova",
+"durum": "Bitti / 3-1",
+"sonuc": "1"
+},
+{
+"no": 12,
+"tarih": "27.09.2026 19:00",
+"ad": "Danimarka-Galler",
+"durum": "Bitti / 2-0",
+"sonuc": "1"
+},
+{
+"no": 13,
+"tarih": "27.09.2026 19:00",
+"ad": "Sirbistan-Hollanda",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 14,
+"tarih": "27.09.2026 21:45",
+"ad": "Almanya-Yunanistan",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+},
+{
+"no": 15,
+"tarih": "27.09.2026 21:45",
+"ad": "Norveç-Portekiz",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 6,
+"kazanc": 4418640.12
+},
+{
+"bilen": 14,
+"adet": 419,
+"kazanc": 36156.61
+},
+{
+"bilen": 13,
+"adet": 7955,
+"kazanc": 1904.41
+},
+{
+"bilen": 12,
+"adet": 73867,
+"kazanc": 256.36
+}
+],
+"guncel": "2026-10-18 03:22"
+},
+"18.09.2026 - 20.09.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "18.09.2026 20:00",
+"ad": "Kasımpaşa A.Ş.-Konyaspor",
+"durum": "Bitti / 0-0",
+"sonuc": "X"
+},
+{
+"no": 2,
+"tarih": "19.09.2026 17:00",
+"ad": "Kocaelispor-Gaziantep F.K. A.Ş.",
+"durum": "Bitti / 2-0",
+"sonuc": "1"
+},
+{
+"no": 3,
+"tarih": "19.09.2026 17:00",
+"ad": "Çorum FK-Alanyaspor",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 4,
+"tarih": "19.09.2026 20:00",
+"ad": "Başakşehir FK-Gençlerbirliği",
+"durum": "Bitti / 4-0",
+"sonuc": "1"
+},
+{
+"no": 5,
+"tarih": "19.09.2026 20:00",
+"ad": "Trabzonspor A.Ş.-Galatasaray A.Ş.",
+"durum": "Bitti / 4-0",
+"sonuc": "1"
+},
+{
+"no": 6,
+"tarih": "20.09.2026 17:00",
+"ad": "Erzurumspor FK-Samsunspor A.Ş.",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 7,
+"tarih": "20.09.2026 17:00",
+"ad": "Fenerbahçe A.Ş.-Eyüpspor",
+"durum": "Bitti / 8-0",
+"sonuc": "1"
+},
+{
+"no": 8,
+"tarih": "20.09.2026 20:00",
+"ad": "Amed Sportif Faliyetler-Beşiktaş A.Ş.",
+"durum": "Bitti / 3-2",
+"sonuc": "1"
+},
+{
+"no": 9,
+"tarih": "20.09.2026 20:00",
+"ad": "Göztepe A.Ş.-Çaykur Rizespor A.Ş.",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+},
+{
+"no": 10,
+"tarih": "19.09.2026 19:30",
+"ad": "Stuttgart-B. Dortmund",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+},
+{
+"no": 11,
+"tarih": "20.09.2026 16:30",
+"ad": "B. Leverkusen-Leipzig",
+"durum": "Bitti / 2-0",
+"sonuc": "1"
+},
+{
+"no": 12,
+"tarih": "19.09.2026 14:30",
+"ad": "Tottenham-Aston Villa",
+"durum": "Bitti / 2-3",
+"sonuc": "2"
+},
+{
+"no": 13,
+"tarih": "19.09.2026 17:00",
+"ad": "Newcastle United-Hull City",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 14,
+"tarih": "20.09.2026 17:15",
+"ad": "Atletico Madrid-Real Madrid",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 15,
+"tarih": "19.09.2026 19:00",
+"ad": "AS Roma-Inter",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 9,
+"kazanc": 10152127.33
+},
+{
+"bilen": 14,
+"adet": 231,
+"kazanc": 128125.11
+},
+{
+"bilen": 13,
+"adet": 3303,
+"kazanc": 8960.61
+},
+{
+"bilen": 12,
+"adet": 28827,
+"kazanc": 1283.38
+}
+],
+"guncel": "2026-10-18 03:22"
+},
+"11.09.2026 - 14.09.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "11.09.2026 20:00",
+"ad": "Beşiktaş A.Ş.-Erzurumspor FK",
+"durum": "Bitti / 3-0",
+"sonuc": "1"
+},
+{
+"no": 2,
+"tarih": "12.09.2026 17:00",
+"ad": "Eyüpspor-Çaykur Rizespor A.Ş.",
+"durum": "Bitti / 0-2",
+"sonuc": "2"
+},
+{
+"no": 3,
+"tarih": "12.09.2026 17:00",
+"ad": "Samsunspor A.Ş.-Çorum FK",
+"durum": "Bitti / 1-5",
+"sonuc": "2"
+},
+{
+"no": 4,
+"tarih": "12.09.2026 20:00",
+"ad": "Alanyaspor-Göztepe A.Ş.",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+},
+{
+"no": 5,
+"tarih": "12.09.2026 20:00",
+"ad": "Konyaspor-Trabzonspor A.Ş.",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 6,
+"tarih": "13.09.2026 17:00",
+"ad": "Gençlerbirliği-Kasimpasa A.Ş.",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 7,
+"tarih": "13.09.2026 20:00",
+"ad": "Amed Sportif-Başakşehir FK",
+"durum": "Bitti / 5-0",
+"sonuc": "1"
+},
+{
+"no": 8,
+"tarih": "13.09.2026 20:00",
+"ad": "Galatasaray A.Ş.-Kocaelispor",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 9,
+"tarih": "14.09.2026 20:00",
+"ad": "Gaziantep F.K. A.S.-Fenerbahçe A.Ş.",
+"durum": "Bitti / 0-0",
+"sonuc": "X"
+},
+{
+"no": 10,
+"tarih": "12.09.2026 16:30",
+"ad": "Augsburg-B. Leverkusen",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+},
+{
+"no": 11,
+"tarih": "11.09.2026 21:45",
+"ad": "Rennes-Marsilya",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 12,
+"tarih": "12.09.2026 17:00",
+"ad": "Chelsea-Hull City",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+},
+{
+"no": 13,
+"tarih": "13.09.2026 18:30",
+"ad": "Manchester United-Manchester City",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+},
+{
+"no": 14,
+"tarih": "13.09.2026 17:15",
+"ad": "Levante-Barcelona",
+"durum": "Bitti / 2-4",
+"sonuc": "2"
+},
+{
+"no": 15,
+"tarih": "12.09.2026 19:00",
+"ad": "Lazio-AC Milan",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 0,
+"kazanc": 39574570.01
+},
+{
+"bilen": 14,
+"adet": 35,
+"kazanc": 646115.42
+},
+{
+"bilen": 13,
+"adet": 591,
+"kazanc": 38264.02
+},
+{
+"bilen": 12,
+"adet": 6371,
+"kazanc": 4436.9
+}
+],
+"guncel": "2026-10-18 03:22"
+},
+"04.09.2026 - 07.09.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "05.09.2026 17:00",
+"ad": "Erzurumspor FK-Konyaspor",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 2,
+"tarih": "06.09.2026 17:00",
+"ad": "Kasımpaşa A.Ş.-Amed Sportif",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+},
+{
+"no": 3,
+"tarih": "06.09.2026 17:00",
+"ad": "Çorum FK-Eyüpspor",
+"durum": "Bitti / 3-0",
+"sonuc": "1"
+},
+{
+"no": 4,
+"tarih": "05.09.2026 20:00",
+"ad": "Fenerbahçe A.Ş.-Beşiktaş A.Ş.",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 5,
+"tarih": "04.09.2026 20:00",
+"ad": "Başakşehir FK-Galatasaray A.Ş.",
+"durum": "Bitti / 2-3",
+"sonuc": "2"
+},
+{
+"no": 6,
+"tarih": "06.09.2026 20:00",
+"ad": "Kocaelispor-Samsunspor A.Ş.",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 7,
+"tarih": "06.09.2026 20:00",
+"ad": "Trabzonspor A.Ş.-Gençlerbirliği",
+"durum": "Bitti / 5-0",
+"sonuc": "1"
+},
+{
+"no": 8,
+"tarih": "07.09.2026 20:00",
+"ad": "Çaykur Rizespor A.Ş.-Alanyaspor",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+},
+{
+"no": 9,
+"tarih": "07.09.2026 20:00",
+"ad": "Göztepe A.Ş.-Gaziantep F.K. A.Ş.",
+"durum": "Bitti / 2-4",
+"sonuc": "2"
+},
+{
+"no": 10,
+"tarih": "06.09.2026 16:00",
+"ad": "Everton-Manchester United",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+},
+{
+"no": 11,
+"tarih": "06.09.2026 18:30",
+"ad": "Arsenal-Chelsea",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 12,
+"tarih": "05.09.2026 17:15",
+"ad": "Athletic Bilbao-Atletico Madrid",
+"durum": "Bitti / 3-0",
+"sonuc": "1"
+},
+{
+"no": 13,
+"tarih": "05.09.2026 19:00",
+"ad": "Inter-Napoli",
+"durum": "Bitti / 3-2",
+"sonuc": "1"
+},
+{
+"no": 14,
+"tarih": "05.09.2026 21:45",
+"ad": "AS Roma-Atalanta",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 15,
+"tarih": "06.09.2026 21:45",
+"ad": "Juventus-AC Milan",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 1,
+"kazanc": 36007678.16
+},
+{
+"bilen": 14,
+"adet": 53,
+"kazanc": 388222.94
+},
+{
+"bilen": 13,
+"adet": 1072,
+"kazanc": 19193.85
+},
+{
+"bilen": 12,
+"adet": 11934,
+"kazanc": 2155.16
+}
+],
+"guncel": "2026-10-18 03:22"
+},
+"28.08.2026 - 31.08.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "28.08.2026 21:30",
+"ad": "Gençlerbirliği-Erzurumspor FK",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 2,
+"tarih": "29.08.2026 19:00",
+"ad": "Konyaspor-Kocaelispor",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 3,
+"tarih": "29.08.2026 21:30",
+"ad": "Galatasaray A.Ş.-Göztepe A.Ş.",
+"durum": "Bitti / 3-2",
+"sonuc": "1"
+},
+{
+"no": 4,
+"tarih": "29.08.2026 21:30",
+"ad": "Gaziantep F.K. A.Ş.-Çaykur Rizespor A.Ş.",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 5,
+"tarih": "30.08.2026 19:00",
+"ad": "Eyüpspor-Alanyaspor",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 6,
+"tarih": "30.08.2026 21:30",
+"ad": "Başakşehir FK-Kasımpaşa A.Ş.",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 7,
+"tarih": "30.08.2026 21:30",
+"ad": "Samsunspor A.Ş.-Fenerbahçe A.Ş.",
+"durum": "Bitti / 0-2",
+"sonuc": "2"
+},
+{
+"no": 8,
+"tarih": "31.08.2026 21:30",
+"ad": "Amed Sportif-Trabzonspor A.Ş.",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 9,
+"tarih": "31.08.2026 21:30",
+"ad": "Beşiktaş A.Ş.-Çorum FK",
+"durum": "Bitti / 6-2",
+"sonuc": "1"
+},
+{
+"no": 10,
+"tarih": "29.08.2026 19:30",
+"ad": "B. Dortmund-Hamburg",
+"durum": "Bitti / 2-0",
+"sonuc": "1"
+},
+{
+"no": 11,
+"tarih": "28.08.2026 21:45",
+"ad": "Lille-PSG",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+},
+{
+"no": 12,
+"tarih": "30.08.2026 21:45",
+"ad": "Monaco-Marsilya",
+"durum": "Bitti / 2-0",
+"sonuc": "1"
+},
+{
+"no": 13,
+"tarih": "29.08.2026 19:30",
+"ad": "Tottenham-Newcastle United",
+"durum": "Bitti / 0-2",
+"sonuc": "2"
+},
+{
+"no": 14,
+"tarih": "29.08.2026 22:30",
+"ad": "Sevilla-Atletico Madrid",
+"durum": "Bitti / 1-3",
+"sonuc": "2"
+},
+{
+"no": 15,
+"tarih": "30.08.2026 21:45",
+"ad": "Cagliari-Inter",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 9,
+"kazanc": 4261867.07
+},
+{
+"bilen": 14,
+"adet": 188,
+"kazanc": 116586.02
+},
+{
+"bilen": 13,
+"adet": 2540,
+"kazanc": 8629.2
+},
+{
+"bilen": 12,
+"adet": 22282,
+"kazanc": 1229.58
+}
+],
+"guncel": "2026-10-18 03:22"
+},
+"21.08.2026 - 25.08.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "21.08.2026 21:30",
+"ad": "Erzurumspor FK-Galatasaray A.Ş.",
+"durum": "Bitti / 0-4",
+"sonuc": "2"
+},
+{
+"no": 2,
+"tarih": "22.08.2026 19:00",
+"ad": "Çaykur Rizespor A.Ş.-Samsunspor A.Ş.",
+"durum": "Bitti / 0-2",
+"sonuc": "2"
+},
+{
+"no": 3,
+"tarih": "22.08.2026 19:00",
+"ad": "Çorum FK-Kasımpaşa A.Ş.",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+},
+{
+"no": 4,
+"tarih": "22.08.2026 21:30",
+"ad": "Fenerbahçe A.Ş.-Konyaspor",
+"durum": "Bitti / 4-2",
+"sonuc": "1"
+},
+{
+"no": 5,
+"tarih": "23.08.2026 19:00",
+"ad": "Eyüpspor-Gaziantep F.K. A.Ş.",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+},
+{
+"no": 6,
+"tarih": "23.08.2026 19:00",
+"ad": "Trabzonspor A.Ş.-Başakşehir FK",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 7,
+"tarih": "23.08.2026 21:30",
+"ad": "Alanyaspor-Beşiktaş A.Ş.",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 8,
+"tarih": "23.08.2026 21:30",
+"ad": "Göztepe A.Ş.-Gençlerbirliği",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+},
+{
+"no": 9,
+"tarih": "24.08.2026 21:30",
+"ad": "Kocaelispor-Amed Sportif",
+"durum": "Bitti / 2-0",
+"sonuc": "1"
+},
+{
+"no": 10,
+"tarih": "22.08.2026 21:30",
+"ad": "B. Dortmund-Bayern Münih",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 11,
+"tarih": "21.08.2026 21:45",
+"ad": "Marsilya-Strasbourg",
+"durum": "Bitti / 4-0",
+"sonuc": "1"
+},
+{
+"no": 12,
+"tarih": "23.08.2026 18:30",
+"ad": "Newcastle United-Liverpool",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+},
+{
+"no": 13,
+"tarih": "21.08.2026 22:00",
+"ad": "Real Betis-Real Sociedad",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 14,
+"tarih": "23.08.2026 18:00",
+"ad": "Atletico Madrid-Villarreal",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+},
+{
+"no": 15,
+"tarih": "23.08.2026 21:45",
+"ad": "Torino-AC Milan",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 3,
+"kazanc": 24330749.43
+},
+{
+"bilen": 14,
+"adet": 121,
+"kazanc": 202327.59
+},
+{
+"bilen": 13,
+"adet": 2077,
+"kazanc": 11787.01
+},
+{
+"bilen": 12,
+"adet": 21272,
+"kazanc": 1438.6
+}
+],
+"guncel": "2026-10-18 03:22"
+},
+"14.08.2026 - 17.08.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "14.08.2026 21:30",
+"ad": "Galatasaray A.Ş.-Çorum FK",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+},
+{
+"no": 2,
+"tarih": "15.08.2026 19:00",
+"ad": "Kasımpaşa A.Ş.-Trabzonspor A.Ş.",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 3,
+"tarih": "15.08.2026 19:00",
+"ad": "Konyaspor-Çaykur Rizespor A.Ş.",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+},
+{
+"no": 4,
+"tarih": "15.08.2026 21:30",
+"ad": "Gaziantep F.K. A.Ş.-Alanyaspor",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 5,
+"tarih": "15.08.2026 21:30",
+"ad": "Gençlerbirliği-Fenerbahçe A.Ş.",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 6,
+"tarih": "16.08.2026 19:00",
+"ad": "Başakşehir FK-Kocaelispor",
+"durum": "Bitti / 2-0",
+"sonuc": "1"
+},
+{
+"no": 7,
+"tarih": "16.08.2026 21:30",
+"ad": "Amed Sportif-Erzurumspor FK",
+"durum": "Bitti / 3-0",
+"sonuc": "1"
+},
+{
+"no": 8,
+"tarih": "16.08.2026 21:30",
+"ad": "Beşiktaş A.Ş.-Eyüpspor",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 9,
+"tarih": "17.08.2026 21:30",
+"ad": "Samsunspor A.Ş.-Göztepe A.Ş.",
+"durum": "Bitti / 3-3",
+"sonuc": "X"
+},
+{
+"no": 10,
+"tarih": "16.08.2026 17:00",
+"ad": "Arsenal-Manchester City",
+"durum": "Bitti / 3-0",
+"sonuc": "1"
+},
+{
+"no": 11,
+"tarih": "16.08.2026 21:45",
+"ad": "RC Lens-PSG",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 12,
+"tarih": "15.08.2026 22:30",
+"ad": "Sevilla-Vallecano",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 13,
+"tarih": "16.08.2026 18:00",
+"ad": "Santander-Villarreal",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+},
+{
+"no": 14,
+"tarih": "16.08.2026 20:00",
+"ad": "Espanyol-Levante",
+"durum": "Bitti / 3-0",
+"sonuc": "1"
+},
+{
+"no": 15,
+"tarih": "16.08.2026 22:30",
+"ad": "Celta Vigo-Osasuna",
+"durum": "Noter",
+"sonuc": "1"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 0,
+"kazanc": 30149380.57
+},
+{
+"bilen": 14,
+"adet": 8,
+"kazanc": 2153527.18
+},
+{
+"bilen": 13,
+"adet": 210,
+"kazanc": 82039.13
+},
+{
+"bilen": 12,
+"adet": 2859,
+"kazanc": 7532.44
+}
+],
+"guncel": "2026-10-18 03:22"
+},
+"08.08.2026 - 09.08.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "09.08.2026 17:00",
+"ad": "Randers-Lyngby BK",
+"durum": "Bitti / 2-0",
+"sonuc": "1"
+},
+{
+"no": 2,
+"tarih": "09.08.2026 19:00",
+"ad": "AC Horsens-Brondby",
+"durum": "Bitti / 0-2",
+"sonuc": "2"
+},
+{
+"no": 3,
+"tarih": "09.08.2026 16:00",
+"ad": "Arsenal-B. Dortmund",
+"durum": "Bitti / 2-3",
+"sonuc": "2"
+},
+{
+"no": 4,
+"tarih": "09.08.2026 19:00",
+"ad": "Oulu-HJK Helsinki",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+},
+{
+"no": 5,
+"tarih": "09.08.2026 17:00",
+"ad": "Inter Turku-Lahti",
+"durum": "Bitti / 0-0",
+"sonuc": "X"
+},
+{
+"no": 6,
+"tarih": "08.08.2026 18:30",
+"ad": "Mjallby-IF Elfsborg",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+},
+{
+"no": 7,
+"tarih": "09.08.2026 15:00",
+"ad": "Hammarby-BK Hacken",
+"durum": "Bitti / 3-0",
+"sonuc": "1"
+},
+{
+"no": 8,
+"tarih": "09.08.2026 17:30",
+"ad": "IFK Göteborg-Kalmar FF",
+"durum": "Bitti / 3-2",
+"sonuc": "1"
+},
+{
+"no": 9,
+"tarih": "08.08.2026 17:00",
+"ad": "Viking-Sarpsborg 08",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 10,
+"tarih": "09.08.2026 15:30",
+"ad": "Lillestrom-Rosenborg",
+"durum": "Bitti / 0-2",
+"sonuc": "2"
+},
+{
+"no": 11,
+"tarih": "09.08.2026 18:00",
+"ad": "Hamkam-Aalesunds",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 12,
+"tarih": "09.08.2026 18:30",
+"ad": "Lech Poznan-Piast Gliwice",
+"durum": "Bitti / 3-0",
+"sonuc": "1"
+},
+{
+"no": 13,
+"tarih": "08.08.2026 21:15",
+"ad": "Korona Kielce-Legia Varsova",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 14,
+"tarih": "09.08.2026 15:45",
+"ad": "Rakow Czestochowa-Zaglebie Lubin",
+"durum": "Noter",
+"sonuc": "1"
+},
+{
+"no": 15,
+"tarih": "09.08.2026 21:15",
+"ad": "Jagiellonia Bialystok-Widzew Lodz",
+"durum": "Bitti / 0-2",
+"sonuc": "2"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 2,
+"kazanc": 24120111.57
+},
+{
+"bilen": 14,
+"adet": 66,
+"kazanc": 246245.32
+},
+{
+"bilen": 13,
+"adet": 947,
+"kazanc": 17161.76
+},
+{
+"bilen": 12,
+"adet": 8903,
+"kazanc": 2281.84
+}
+],
+"guncel": "2026-10-18 03:22"
+},
+"31.07.2026 - 03.08.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "31.07.2026 21:30",
+"ad": "Club Brugge-Union Saint Gilloise",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 2,
+"tarih": "02.08.2026 17:00",
+"ad": "Brondby-Viborg",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 3,
+"tarih": "03.08.2026 20:00",
+"ad": "Odense-Sonderjyske",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 4,
+"tarih": "02.08.2026 19:00",
+"ad": "PSV-AZ Alkmaar",
+"durum": "Bitti / 0-4",
+"sonuc": "2"
+},
+{
+"no": 5,
+"tarih": "01.08.2026 16:00",
+"ad": "BK Hacken-Kalmar FF",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 6,
+"tarih": "02.08.2026 15:00",
+"ad": "Brommapojkarna-Malmö",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 7,
+"tarih": "02.08.2026 17:30",
+"ad": "AIK Solna-Orgryte",
+"durum": "Bitti / 0-3",
+"sonuc": "2"
+},
+{
+"no": 8,
+"tarih": "03.08.2026 20:00",
+"ad": "Djurgardens-Vasteraas",
+"durum": "Bitti / 6-0",
+"sonuc": "1"
+},
+{
+"no": 9,
+"tarih": "31.07.2026 20:00",
+"ad": "Valerenga-Hamkam",
+"durum": "Bitti / 0-3",
+"sonuc": "2"
+},
+{
+"no": 10,
+"tarih": "31.07.2026 22:00",
+"ad": "Bodo Glimt-Lillestrom",
+"durum": "Bitti / 4-0",
+"sonuc": "1"
+},
+{
+"no": 11,
+"tarih": "01.08.2026 17:00",
+"ad": "Fredrikstad-Sandefjord",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 12,
+"tarih": "02.08.2026 18:00",
+"ad": "Kfum Oslo-Kristiansund",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 13,
+"tarih": "02.08.2026 18:00",
+"ad": "Molde-Sarpsborg 08",
+"durum": "Bitti / 3-3",
+"sonuc": "X"
+},
+{
+"no": 14,
+"tarih": "01.08.2026 22:15",
+"ad": "Porto-Torreense",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 15,
+"tarih": "02.08.2026 15:45",
+"ad": "Legia Varsova-Zaglebie Lubin",
+"durum": "Bitti / 3-1",
+"sonuc": "1"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 0,
+"kazanc": 19798888.2
+},
+{
+"bilen": 14,
+"adet": 14,
+"kazanc": 808117.88
+},
+{
+"bilen": 13,
+"adet": 372,
+"kazanc": 30413.03
+},
+{
+"bilen": 12,
+"adet": 5324,
+"kazanc": 2656.28
+}
+],
+"guncel": "2026-10-18 03:22"
+},
+"24.07.2026 - 27.07.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "25.07.2026 19:00",
+"ad": "AGF Aarhus-Brondby",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 2,
+"tarih": "26.07.2026 19:00",
+"ad": "AC Horsens-Nordsjælland",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 3,
+"tarih": "27.07.2026 20:00",
+"ad": "Randers-Silkeborg",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 4,
+"tarih": "26.07.2026 15:00",
+"ad": "Tampereen-Lahti",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 5,
+"tarih": "26.07.2026 17:00",
+"ad": "HJK Helsinki-TPS Turku",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 6,
+"tarih": "24.07.2026 20:00",
+"ad": "Vasteraas-Orgryte",
+"durum": "Bitti / 2-0",
+"sonuc": "1"
+},
+{
+"no": 7,
+"tarih": "26.07.2026 15:00",
+"ad": "IK Sirius-IFK Göteborg",
+"durum": "Bitti / 4-1",
+"sonuc": "1"
+},
+{
+"no": 8,
+"tarih": "26.07.2026 17:30",
+"ad": "Malmö-IF Elfsborg",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 9,
+"tarih": "26.07.2026 18:00",
+"ad": "Kfum Oslo-Molde",
+"durum": "Bitti / 2-4",
+"sonuc": "2"
+},
+{
+"no": 10,
+"tarih": "26.07.2026 18:00",
+"ad": "Sandefjord-Bodo Glimt",
+"durum": "Bitti / 0-3",
+"sonuc": "2"
+},
+{
+"no": 11,
+"tarih": "27.07.2026 20:00",
+"ad": "Rosenborg-Fredrikstad",
+"durum": "Bitti / 4-0",
+"sonuc": "1"
+},
+{
+"no": 12,
+"tarih": "24.07.2026 21:30",
+"ad": "Pogon Szczecin-Legia Varsova",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+},
+{
+"no": 13,
+"tarih": "25.07.2026 21:15",
+"ad": "Lech Poznan-Cracovia",
+"durum": "Bitti / 0-0",
+"sonuc": "X"
+},
+{
+"no": 14,
+"tarih": "26.07.2026 21:15",
+"ad": "Wisla Krakow-Katowice",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 15,
+"tarih": "27.07.2026 20:00",
+"ad": "Zaglebie Lubin-Piast Gliwice",
+"durum": "Bitti / 2-0",
+"sonuc": "1"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 9,
+"kazanc": 4035942.42
+},
+{
+"bilen": 14,
+"adet": 389,
+"kazanc": 31794.38
+},
+{
+"bilen": 13,
+"adet": 6759,
+"kazanc": 1829.85
+},
+{
+"bilen": 12,
+"adet": 53534,
+"kazanc": 288.78
+}
+],
+"guncel": "2026-10-18 03:22"
+},
+"17.07.2026 - 20.07.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "18.07.2026 16:00",
+"ad": "AIK Solna-Gais",
+"durum": "Bitti / 2-0",
+"sonuc": "1"
+},
+{
+"no": 2,
+"tarih": "17.07.2026 20:00",
+"ad": "IFK Göteborg-Brommapojkarna",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 3,
+"tarih": "19.07.2026 17:30",
+"ad": "Halmstads BK-BK Hacken",
+"durum": "Bitti / 0-2",
+"sonuc": "2"
+},
+{
+"no": 4,
+"tarih": "19.07.2026 17:30",
+"ad": "Hammarby-Degerfors IF",
+"durum": "Bitti / 4-0",
+"sonuc": "1"
+},
+{
+"no": 5,
+"tarih": "19.07.2026 17:30",
+"ad": "IF Elfsborg-IK Sirius",
+"durum": "Bitti / 1-3",
+"sonuc": "2"
+},
+{
+"no": 6,
+"tarih": "20.07.2026 20:00",
+"ad": "Kalmar FF-Malmö",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+},
+{
+"no": 7,
+"tarih": "18.07.2026 15:00",
+"ad": "HJK Helsinki-Vaasan Ps",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 8,
+"tarih": "18.07.2026 17:00",
+"ad": "Oulu-Gnistan",
+"durum": "Bitti / 0-2",
+"sonuc": "2"
+},
+{
+"no": 9,
+"tarih": "18.07.2026 13:30",
+"ad": "Incheon United FC-Jeonbuk",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 10,
+"tarih": "18.07.2026 13:30",
+"ad": "Jeju Utd-Pohang Steelers",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 11,
+"tarih": "18.07.2026 14:00",
+"ad": "Chongqing Tonglianglong FC-Zhejiang",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 12,
+"tarih": "17.07.2026 14:00",
+"ad": "Qingdao Youth Island-Chengdu Rongcheng",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 13,
+"tarih": "18.07.2026 14:35",
+"ad": "Dalian Zhixing FC-Shandong Taishan",
+"durum": "Bitti / 3-1",
+"sonuc": "1"
+},
+{
+"no": 14,
+"tarih": "18.07.2026 14:35",
+"ad": "Shanghai Shenhua-Tianjin Jinmen",
+"durum": "Bitti / 0-2",
+"sonuc": "2"
+},
+{
+"no": 15,
+"tarih": "18.07.2026 15:00",
+"ad": "Wuhan Three Towns-Shenzhen Peng City",
+"durum": "Bitti / 2-0",
+"sonuc": "1"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 0,
+"kazanc": 14679456.58
+},
+{
+"bilen": 14,
+"adet": 14,
+"kazanc": 599161.49
+},
+{
+"bilen": 13,
+"adet": 231,
+"kazanc": 36312.81
+},
+{
+"bilen": 12,
+"adet": 2563,
+"kazanc": 4091.03
+}
+],
+"guncel": "2026-10-18 03:22"
+},
+"11.07.2026 - 13.07.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "11.07.2026 16:00",
+"ad": "Mjallby-AIK Solna",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 2,
+"tarih": "12.07.2026 15:00",
+"ad": "Hammarby-Kalmar FF",
+"durum": "Bitti / 2-0",
+"sonuc": "1"
+},
+{
+"no": 3,
+"tarih": "12.07.2026 15:00",
+"ad": "Malmö-IFK Göteborg",
+"durum": "Bitti / 4-0",
+"sonuc": "1"
+},
+{
+"no": 4,
+"tarih": "12.07.2026 17:30",
+"ad": "Gais-IF Elfsborg",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 5,
+"tarih": "13.07.2026 20:00",
+"ad": "Djurgardens-Halmstads BK",
+"durum": "Bitti / 3-0",
+"sonuc": "1"
+},
+{
+"no": 6,
+"tarih": "11.07.2026 15:00",
+"ad": "Lahti-HJK Helsinki",
+"durum": "Bitti / 2-0",
+"sonuc": "1"
+},
+{
+"no": 7,
+"tarih": "11.07.2026 17:00",
+"ad": "TPS Turku-Oulu",
+"durum": "Bitti / 3-0",
+"sonuc": "1"
+},
+{
+"no": 8,
+"tarih": "11.07.2026 13:30",
+"ad": "Ulsan Hora-I-Jeonbuk",
+"durum": "Bitti / 1-3",
+"sonuc": "2"
+},
+{
+"no": 9,
+"tarih": "12.07.2026 13:30",
+"ad": "FC Seoul-Gangwon FC",
+"durum": "Bitti / 0-0",
+"sonuc": "X"
+},
+{
+"no": 10,
+"tarih": "12.07.2026 13:30",
+"ad": "Jeju Utd-Daejeon Citizen",
+"durum": "Bitti / 0-0",
+"sonuc": "X"
+},
+{
+"no": 11,
+"tarih": "11.07.2026 14:00",
+"ad": "Wuhan Three Towns-Henan Songshan",
+"durum": "Noter",
+"sonuc": "1"
+},
+{
+"no": 12,
+"tarih": "11.07.2026 14:00",
+"ad": "Zhejiang-Qingdao Jonoon",
+"durum": "Bitti / 3-2",
+"sonuc": "1"
+},
+{
+"no": 13,
+"tarih": "11.07.2026 14:35",
+"ad": "Shanghai Shenhua-Beijing Guoan",
+"durum": "Noter",
+"sonuc": "2"
+},
+{
+"no": 14,
+"tarih": "11.07.2026 14:35",
+"ad": "Shenzhen Peng City-Qingdao Youth Island",
+"durum": "Bitti / 3-0",
+"sonuc": "1"
+},
+{
+"no": 15,
+"tarih": "11.07.2026 15:00",
+"ad": "Chengdu Rongcheng-Chongqing Tonglianglong FC",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 1,
+"kazanc": 18056577.15
+},
+{
+"bilen": 14,
+"adet": 36,
+"kazanc": 286612.33
+},
+{
+"bilen": 13,
+"adet": 513,
+"kazanc": 20113.14
+},
+{
+"bilen": 12,
+"adet": 4499,
+"kazanc": 2866.76
+}
+],
+"guncel": "2026-10-18 03:22"
+},
+"03.07.2026 - 06.07.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "03.07.2026 20:00",
+"ad": "IK Sirius-Mjallby",
+"durum": "Bitti / 4-4",
+"sonuc": "X"
+},
+{
+"no": 2,
+"tarih": "04.07.2026 16:00",
+"ad": "Degerfors IF-Malmö",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+},
+{
+"no": 3,
+"tarih": "05.07.2026 15:00",
+"ad": "IFK Göteborg-AIK Solna",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 4,
+"tarih": "05.07.2026 17:30",
+"ad": "IF Elfsborg-Hammarby",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 5,
+"tarih": "06.07.2026 20:00",
+"ad": "BK Hacken-Djurgardens",
+"durum": "Bitti / 2-4",
+"sonuc": "2"
+},
+{
+"no": 6,
+"tarih": "06.07.2026 20:00",
+"ad": "Brommapojkarna-Gais",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 7,
+"tarih": "04.07.2026 13:30",
+"ad": "FC Anyang-Pohang Steelers",
+"durum": "Bitti / 2-3",
+"sonuc": "2"
+},
+{
+"no": 8,
+"tarih": "04.07.2026 13:30",
+"ad": "Jeonbuk-Gangwon FC",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 9,
+"tarih": "05.07.2026 13:30",
+"ad": "FC Seoul-Incheon United FC",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 10,
+"tarih": "04.07.2026 14:00",
+"ad": "Qingdao Youth Island-Shanghai Port",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 11,
+"tarih": "04.07.2026 14:35",
+"ad": "Beijing Guoan-Shandong Taishan",
+"durum": "Bitti / 2-0",
+"sonuc": "1"
+},
+{
+"no": 12,
+"tarih": "05.07.2026 14:35",
+"ad": "Shanghai Shenhua-Zhejiang",
+"durum": "Bitti / 3-2",
+"sonuc": "1"
+},
+{
+"no": 13,
+"tarih": "03.07.2026 21:45",
+"ad": "St. Patricks-Galway U",
+"durum": "Bitti / 3-0",
+"sonuc": "1"
+},
+{
+"no": 14,
+"tarih": "03.07.2026 22:00",
+"ad": "Shelbourne-Dundalk",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 15,
+"tarih": "03.07.2026 21:45",
+"ad": "Sligo Rovers-Shamrock R",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 4,
+"kazanc": 4419358.43
+},
+{
+"bilen": 14,
+"adet": 121,
+"kazanc": 83482.56
+},
+{
+"bilen": 13,
+"adet": 1589,
+"kazanc": 6357.07
+},
+{
+"bilen": 12,
+"adet": 13083,
+"kazanc": 965.12
+}
+],
+"guncel": "2026-10-18 03:22"
+},
+"26.06.2026 - 28.06.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "26.06.2026 05:00",
+"ad": "Türkiye-ABD",
+"durum": "Bitti / 3-2",
+"sonuc": "1"
+},
+{
+"no": 2,
+"tarih": "26.06.2026 02:00",
+"ad": "Japonya-İsveç",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 3,
+"tarih": "26.06.2026 05:00",
+"ad": "Paraguay-Avustralya",
+"durum": "Bitti / 0-0",
+"sonuc": "X"
+},
+{
+"no": 4,
+"tarih": "26.06.2026 22:00",
+"ad": "Norveç-Fransa",
+"durum": "Bitti / 1-4",
+"sonuc": "2"
+},
+{
+"no": 5,
+"tarih": "26.06.2026 22:00",
+"ad": "Senegal-Irak",
+"durum": "Bitti / 5-0",
+"sonuc": "1"
+},
+{
+"no": 6,
+"tarih": "27.06.2026 03:00",
+"ad": "Uruguay-İspanya",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+},
+{
+"no": 7,
+"tarih": "27.06.2026 03:00",
+"ad": "Yeşil Burun Adaları-Suudi Arabistan",
+"durum": "Bitti / 0-0",
+"sonuc": "X"
+},
+{
+"no": 8,
+"tarih": "27.06.2026 06:00",
+"ad": "Mısır-İran",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 9,
+"tarih": "27.06.2026 06:00",
+"ad": "Yeni Zelanda-Belçika",
+"durum": "Bitti / 1-5",
+"sonuc": "2"
+},
+{
+"no": 10,
+"tarih": "28.06.2026 00:00",
+"ad": "Hırvatistan-Gana",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 11,
+"tarih": "28.06.2026 00:00",
+"ad": "Panama-İngiltere",
+"durum": "Bitti / 0-2",
+"sonuc": "2"
+},
+{
+"no": 12,
+"tarih": "28.06.2026 02:30",
+"ad": "Demokratik Kongo Cumhu.-Özbekistan",
+"durum": "Bitti / 3-1",
+"sonuc": "1"
+},
+{
+"no": 13,
+"tarih": "28.06.2026 02:30",
+"ad": "Kolombiya-Portekiz",
+"durum": "Bitti / 0-0",
+"sonuc": "X"
+},
+{
+"no": 14,
+"tarih": "28.06.2026 05:00",
+"ad": "Cezayir-Avusturya",
+"durum": "Bitti / 3-3",
+"sonuc": "X"
+},
+{
+"no": 15,
+"tarih": "28.06.2026 05:00",
+"ad": "Ürdün-Arjantin",
+"durum": "Bitti / 1-3",
+"sonuc": "2"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 971,
+"kazanc": 30578.23
+},
+{
+"bilen": 14,
+"adet": 14945,
+"kazanc": 1135.26
+},
+{
+"bilen": 13,
+"adet": 101633,
+"kazanc": 166.93
+},
+{
+"bilen": 12,
+"adet": 412124,
+"kazanc": 51.46
+}
+],
+"guncel": "2026-10-18 03:22"
+},
+"19.06.2026 - 23.06.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "20.06.2026 06:00",
+"ad": "Türkiye-Paraguay",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+},
+{
+"no": 2,
+"tarih": "19.06.2026 22:00",
+"ad": "ABD-Avustralya",
+"durum": "Bitti / 2-0",
+"sonuc": "1"
+},
+{
+"no": 3,
+"tarih": "20.06.2026 01:00",
+"ad": "İskoçya-Fas",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+},
+{
+"no": 4,
+"tarih": "20.06.2026 03:30",
+"ad": "Brezilya-Haiti",
+"durum": "Bitti / 3-0",
+"sonuc": "1"
+},
+{
+"no": 5,
+"tarih": "20.06.2026 20:00",
+"ad": "Hollanda-İsveç",
+"durum": "Bitti / 5-1",
+"sonuc": "1"
+},
+{
+"no": 6,
+"tarih": "20.06.2026 23:00",
+"ad": "Almanya-Fildişi Sahili",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 7,
+"tarih": "21.06.2026 03:00",
+"ad": "Ekvador-Curaçao",
+"durum": "Bitti / 0-0",
+"sonuc": "X"
+},
+{
+"no": 8,
+"tarih": "21.06.2026 07:00",
+"ad": "Tunus-Japonya",
+"durum": "Bitti / 0-4",
+"sonuc": "2"
+},
+{
+"no": 9,
+"tarih": "21.06.2026 19:00",
+"ad": "İspanya-Suudi Arabistan",
+"durum": "Bitti / 4-0",
+"sonuc": "1"
+},
+{
+"no": 10,
+"tarih": "22.06.2026 01:00",
+"ad": "Uruguay-Yeşil Burun Adaları",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+},
+{
+"no": 11,
+"tarih": "22.06.2026 04:00",
+"ad": "Yeni Zelanda-Mısır",
+"durum": "Bitti / 1-3",
+"sonuc": "2"
+},
+{
+"no": 12,
+"tarih": "22.06.2026 20:00",
+"ad": "Arjantin-Avusturya",
+"durum": "Bitti / 2-0",
+"sonuc": "1"
+},
+{
+"no": 13,
+"tarih": "23.06.2026 00:00",
+"ad": "Fransa-Irak",
+"durum": "Bitti / 3-0",
+"sonuc": "1"
+},
+{
+"no": 14,
+"tarih": "23.06.2026 03:00",
+"ad": "Norveç-Senegal",
+"durum": "Bitti / 3-2",
+"sonuc": "1"
+},
+{
+"no": 15,
+"tarih": "23.06.2026 06:00",
+"ad": "Ürdün-Cezayir",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 309,
+"kazanc": 240102.44
+},
+{
+"bilen": 14,
+"adet": 9737,
+"kazanc": 4354.03
+},
+{
+"bilen": 13,
+"adet": 112063,
+"kazanc": 237.43
+},
+{
+"bilen": 12,
+"adet": 656967,
+"kazanc": 50.62
+}
+],
+"guncel": "2026-10-18 03:22"
+},
+"12.06.2026 - 16.06.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "14.06.2026 07:00",
+"ad": "Avustralya-Türkiye",
+"durum": "Bitti / 2-0",
+"sonuc": "1"
+},
+{
+"no": 2,
+"tarih": "12.06.2026 22:00",
+"ad": "Kanada-Bosna Hersek",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 3,
+"tarih": "13.06.2026 04:00",
+"ad": "ABD-Paraguay",
+"durum": "Bitti / 4-1",
+"sonuc": "1"
+},
+{
+"no": 4,
+"tarih": "13.06.2026 22:00",
+"ad": "Katar-İsviçre",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 5,
+"tarih": "14.06.2026 01:00",
+"ad": "Brezilya-Fas",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 6,
+"tarih": "14.06.2026 04:00",
+"ad": "Haiti-İskoçya",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+},
+{
+"no": 7,
+"tarih": "14.06.2026 20:00",
+"ad": "Almanya-Curaçao",
+"durum": "Bitti / 7-1",
+"sonuc": "1"
+},
+{
+"no": 8,
+"tarih": "14.06.2026 23:00",
+"ad": "Hollanda-Japonya",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+},
+{
+"no": 9,
+"tarih": "15.06.2026 02:00",
+"ad": "Fildişi Sahili-Ekvador",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 10,
+"tarih": "15.06.2026 05:00",
+"ad": "İsveç-Tunus",
+"durum": "Bitti / 5-1",
+"sonuc": "1"
+},
+{
+"no": 11,
+"tarih": "15.06.2026 19:00",
+"ad": "İspanya-Yeşil Burun Adaları",
+"durum": "Bitti / 0-0",
+"sonuc": "X"
+},
+{
+"no": 12,
+"tarih": "15.06.2026 22:00",
+"ad": "Belçika-Mısır",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 13,
+"tarih": "16.06.2026 01:00",
+"ad": "Suudi Arabistan-Uruguay",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 14,
+"tarih": "16.06.2026 04:00",
+"ad": "İran-Yeni Zelanda",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+},
+{
+"no": 15,
+"tarih": "16.06.2026 22:00",
+"ad": "Fransa-Senegal",
+"durum": "Bitti / 3-1",
+"sonuc": "1"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 0,
+"kazanc": 27627264.51
+},
+{
+"bilen": 14,
+"adet": 0,
+"kazanc": 15787008.29
+},
+{
+"bilen": 13,
+"adet": 96,
+"kazanc": 164448
+},
+{
+"bilen": 12,
+"adet": 2111,
+"kazanc": 9348.06
+}
+],
+"guncel": "2026-10-18 03:22"
+},
+"05.06.2026 - 07.06.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "07.06.2026 14:00",
+"ad": "Binh Duong-Hoang Anh",
+"durum": "Bitti / 3-1",
+"sonuc": "1"
+},
+{
+"no": 2,
+"tarih": "06.06.2026 15:00",
+"ad": "Brabrand-Fremad Amager",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 3,
+"tarih": "06.06.2026 15:00",
+"ad": "Roskilde-Hellerup",
+"durum": "Bitti / 3-2",
+"sonuc": "1"
+},
+{
+"no": 4,
+"tarih": "06.06.2026 15:00",
+"ad": "Skive IK-Ishoej IF",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 5,
+"tarih": "05.06.2026 18:30",
+"ad": "Haka-Japs",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 6,
+"tarih": "05.06.2026 22:15",
+"ad": "Aegir-L. Reykjavik",
+"durum": "Bitti / 0-3",
+"sonuc": "2"
+},
+{
+"no": 7,
+"tarih": "05.06.2026 22:15",
+"ad": "Kopavogur-Afturelding",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 8,
+"tarih": "05.06.2026 22:15",
+"ad": "UMF Njardvik-Ir Reykjavik",
+"durum": "Bitti / 5-1",
+"sonuc": "1"
+},
+{
+"no": 9,
+"tarih": "06.06.2026 16:00",
+"ad": "IF Vestri-Völsungur",
+"durum": "Bitti / 5-1",
+"sonuc": "1"
+},
+{
+"no": 10,
+"tarih": "06.06.2026 17:00",
+"ad": "Fylkir Reykjavik-T Reykjavik",
+"durum": "Bitti / 1-3",
+"sonuc": "2"
+},
+{
+"no": 11,
+"tarih": "06.06.2026 17:00",
+"ad": "Grotta-Grindavik",
+"durum": "Noter",
+"sonuc": "1"
+},
+{
+"no": 12,
+"tarih": "06.06.2026 13:30",
+"ad": "Gyeongnam FC-Yongin City FC",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+},
+{
+"no": 13,
+"tarih": "06.06.2026 13:30",
+"ad": "Hwaseong FC-Suwon Samsung Bluewings",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 14,
+"tarih": "07.06.2026 13:30",
+"ad": "Cheonan City FC-Suwon City",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+},
+{
+"no": 15,
+"tarih": "05.06.2026 19:00",
+"ad": "FK Ekranas-FC Neptunas Klaipeda",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 2,
+"kazanc": 7539357.51
+},
+{
+"bilen": 14,
+"adet": 136,
+"kazanc": 63355.94
+},
+{
+"bilen": 13,
+"adet": 2192,
+"kazanc": 3930.84
+},
+{
+"bilen": 12,
+"adet": 17375,
+"kazanc": 619.88
+}
+],
+"guncel": "2026-10-18 03:22"
+},
+"29.05.2026 - 31.05.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "29.05.2026 21:45",
+"ad": "Nice-St Etienne",
+"durum": "Bitti / 4-1",
+"sonuc": "1"
+},
+{
+"no": 2,
+"tarih": "30.05.2026 19:00",
+"ad": "PSG-Arsenal",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 3,
+"tarih": "30.05.2026 22:00",
+"ad": "Flamengo-Coritiba",
+"durum": "Bitti / 3-0",
+"sonuc": "1"
+},
+{
+"no": 4,
+"tarih": "30.05.2026 23:30",
+"ad": "Bahia BA-Botafogo RJ",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 5,
+"tarih": "30.05.2026 23:30",
+"ad": "Gremio Porto-Corinthians",
+"durum": "Bitti / 1-3",
+"sonuc": "2"
+},
+{
+"no": 6,
+"tarih": "31.05.2026 17:00",
+"ad": "Bragantino SP-Internacional",
+"durum": "Bitti / 3-1",
+"sonuc": "1"
+},
+{
+"no": 7,
+"tarih": "30.05.2026 16:00",
+"ad": "AIK Solna-IK Sirius",
+"durum": "Bitti / 0-3",
+"sonuc": "2"
+},
+{
+"no": 8,
+"tarih": "30.05.2026 16:00",
+"ad": "Malmö-Halmstads BK",
+"durum": "Bitti / 5-2",
+"sonuc": "1"
+},
+{
+"no": 9,
+"tarih": "31.05.2026 15:00",
+"ad": "BK Hacken-Hammarby",
+"durum": "Bitti / 3-2",
+"sonuc": "1"
+},
+{
+"no": 10,
+"tarih": "31.05.2026 17:30",
+"ad": "Mjallby-Djurgardens",
+"durum": "Noter",
+"sonuc": "1"
+},
+{
+"no": 11,
+"tarih": "29.05.2026 20:00",
+"ad": "Rosenborg-Bodo Glimt",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+},
+{
+"no": 12,
+"tarih": "30.05.2026 17:00",
+"ad": "Lillestrom-Viking",
+"durum": "Noter",
+"sonuc": "2"
+},
+{
+"no": 13,
+"tarih": "30.05.2026 15:00",
+"ad": "HJK Helsinki-Mariehamn",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 14,
+"tarih": "30.05.2026 17:00",
+"ad": "Kuopion-Inter Turku",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 15,
+"tarih": "30.05.2026 17:00",
+"ad": "Lahti-Tampereen",
+"durum": "Bitti / 5-0",
+"sonuc": "1"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 28,
+"kazanc": 1809405.11
+},
+{
+"bilen": 14,
+"adet": 926,
+"kazanc": 15697.48
+},
+{
+"bilen": 13,
+"adet": 12558,
+"kazanc": 1157.49
+},
+{
+"bilen": 12,
+"adet": 89167,
+"kazanc": 203.77
+}
+],
+"guncel": "2026-10-18 03:22"
+},
+"22.05.2026 - 24.05.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "24.05.2026 19:30",
+"ad": "Club Brugge-KAA Gent",
+"durum": "Bitti / 5-0",
+"sonuc": "1"
+},
+{
+"no": 2,
+"tarih": "24.05.2026 19:30",
+"ad": "Union Saint Gilloise-Anderlecht",
+"durum": "Bitti / 5-1",
+"sonuc": "1"
+},
+{
+"no": 3,
+"tarih": "24.05.2026 18:00",
+"ad": "Crystal Palace-Arsenal",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 4,
+"tarih": "24.05.2026 18:00",
+"ad": "Liverpool-Brentford",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 5,
+"tarih": "24.05.2026 18:00",
+"ad": "Manchester City-Aston Villa",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 6,
+"tarih": "24.05.2026 18:00",
+"ad": "Tottenham-Everton",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 7,
+"tarih": "23.05.2026 22:00",
+"ad": "Celta Vigo-Sevilla",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 8,
+"tarih": "23.05.2026 22:00",
+"ad": "Espanyol-Real Sociedad",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 9,
+"tarih": "23.05.2026 22:00",
+"ad": "Girona-Elche",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 10,
+"tarih": "23.05.2026 22:00",
+"ad": "Real Betis-Levante",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 11,
+"tarih": "23.05.2026 22:00",
+"ad": "Real Madrid-Athletic Bilbao",
+"durum": "Bitti / 4-2",
+"sonuc": "1"
+},
+{
+"no": 12,
+"tarih": "24.05.2026 21:45",
+"ad": "AC Milan-Cagliari",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 13,
+"tarih": "24.05.2026 21:45",
+"ad": "Cremonese-Como 1907",
+"durum": "Bitti / 1-4",
+"sonuc": "2"
+},
+{
+"no": 14,
+"tarih": "22.05.2026 21:45",
+"ad": "Fiorentina-Atalanta",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 15,
+"tarih": "24.05.2026 21:45",
+"ad": "Torino-Juventus",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 0,
+"kazanc": 25225575.75
+},
+{
+"bilen": 14,
+"adet": 20,
+"kazanc": 720730.73
+},
+{
+"bilen": 13,
+"adet": 503,
+"kazanc": 28657.28
+},
+{
+"bilen": 12,
+"adet": 7026,
+"kazanc": 2564.51
+}
+],
+"guncel": "2026-10-18 03:22"
+},
+"15.05.2026 - 20.05.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "17.05.2026 20:00",
+"ad": "Antalyaspor-Kocaelispor",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 2,
+"tarih": "16.05.2026 17:00",
+"ad": "Fatih Karagümrük-Alanyaspor",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 3,
+"tarih": "17.05.2026 20:00",
+"ad": "Fenerbahçe A.Ş.-Eyüpspor",
+"durum": "Bitti / 3-3",
+"sonuc": "X"
+},
+{
+"no": 4,
+"tarih": "16.05.2026 20:00",
+"ad": "Gaziantep F.K. A.Ş.-Başakşehir FK",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 5,
+"tarih": "17.05.2026 20:00",
+"ad": "Kasımpaşa A.Ş.-Galatasaray A.Ş.",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 6,
+"tarih": "17.05.2026 17:00",
+"ad": "Kayserispor-Konyaspor",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 7,
+"tarih": "15.05.2026 20:00",
+"ad": "Çaykur Rizespor A.Ş.-Beşiktaş A.Ş.",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+},
+{
+"no": 8,
+"tarih": "16.05.2026 20:00",
+"ad": "Samsunspor A.Ş.-Göztepe A.Ş.",
+"durum": "Bitti / 3-0",
+"sonuc": "1"
+},
+{
+"no": 9,
+"tarih": "17.05.2026 20:00",
+"ad": "Trabzonspor A.Ş.-Gençlerbirliği",
+"durum": "Bitti / 0-3",
+"sonuc": "2"
+},
+{
+"no": 10,
+"tarih": "16.05.2026 16:30",
+"ad": "Eintracht Frankfurt-Stuttgart",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+},
+{
+"no": 11,
+"tarih": "17.05.2026 22:00",
+"ad": "Lyon-RC Lens",
+"durum": "Bitti / 0-4",
+"sonuc": "2"
+},
+{
+"no": 12,
+"tarih": "15.05.2026 22:00",
+"ad": "Aston Villa-Liverpool",
+"durum": "Bitti / 4-2",
+"sonuc": "1"
+},
+{
+"no": 13,
+"tarih": "19.05.2026 22:15",
+"ad": "Chelsea-Tottenham",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 14,
+"tarih": "17.05.2026 22:15",
+"ad": "Barcelona-Real Betis",
+"durum": "Bitti / 3-1",
+"sonuc": "1"
+},
+{
+"no": 15,
+"tarih": "17.05.2026 20:00",
+"ad": "Sevilla-Real Madrid",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 2,
+"kazanc": 17529254.7
+},
+{
+"bilen": 14,
+"adet": 54,
+"kazanc": 370989.51
+},
+{
+"bilen": 13,
+"adet": 665,
+"kazanc": 30125.46
+},
+{
+"bilen": 12,
+"adet": 6404,
+"kazanc": 3910.33
+}
+],
+"guncel": "2026-10-18 03:22"
+},
+"09.05.2026 - 10.05.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "09.05.2026 20:00",
+"ad": "Alanyaspor-Kayserispor",
+"durum": "Bitti / 3-1",
+"sonuc": "1"
+},
+{
+"no": 2,
+"tarih": "09.05.2026 20:00",
+"ad": "Başakşehir FK-Samsunspor A.Ş.",
+"durum": "Bitti / 3-0",
+"sonuc": "1"
+},
+{
+"no": 3,
+"tarih": "09.05.2026 20:00",
+"ad": "Beşiktaş A.Ş.-Trabzonspor A.Ş.",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 4,
+"tarih": "09.05.2026 20:00",
+"ad": "Eyüpspor-Çaykur Rizespor A.Ş.",
+"durum": "Bitti / 4-0",
+"sonuc": "1"
+},
+{
+"no": 5,
+"tarih": "09.05.2026 20:00",
+"ad": "Galatasaray A.Ş.-Antalyaspor",
+"durum": "Bitti / 4-2",
+"sonuc": "1"
+},
+{
+"no": 6,
+"tarih": "09.05.2026 20:00",
+"ad": "Gençlerbirliği-Kasımpaşa A.Ş.",
+"durum": "Bitti / 3-2",
+"sonuc": "1"
+},
+{
+"no": 7,
+"tarih": "09.05.2026 20:00",
+"ad": "Göztepe A.Ş.-Gaziantep F.K. A.Ş.",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 8,
+"tarih": "09.05.2026 20:00",
+"ad": "Kocaelispor-Fatih Karagümrük",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+},
+{
+"no": 9,
+"tarih": "09.05.2026 20:00",
+"ad": "Konyaspor-Fenerbahçe A.Ş.",
+"durum": "Bitti / 0-3",
+"sonuc": "2"
+},
+{
+"no": 10,
+"tarih": "09.05.2026 16:30",
+"ad": "Stuttgart-B. Leverkusen",
+"durum": "Bitti / 3-1",
+"sonuc": "1"
+},
+{
+"no": 11,
+"tarih": "10.05.2026 22:00",
+"ad": "Monaco-Lille",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+},
+{
+"no": 12,
+"tarih": "09.05.2026 14:30",
+"ad": "Liverpool-Chelsea",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 13,
+"tarih": "09.05.2026 22:00",
+"ad": "Real Sociedad-Real Betis",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+},
+{
+"no": 14,
+"tarih": "10.05.2026 22:00",
+"ad": "Barcelona-Real Madrid",
+"durum": "Bitti / 2-0",
+"sonuc": "1"
+},
+{
+"no": 15,
+"tarih": "09.05.2026 19:00",
+"ad": "Lazio-Inter",
+"durum": "Bitti / 0-3",
+"sonuc": "2"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 9,
+"kazanc": 8585138.55
+},
+{
+"bilen": 14,
+"adet": 568,
+"kazanc": 47413.27
+},
+{
+"bilen": 13,
+"adet": 8410,
+"kazanc": 3202.22
+},
+{
+"bilen": 12,
+"adet": 68370,
+"kazanc": 492.37
+}
+],
+"guncel": "2026-10-18 03:22"
+},
+"01.05.2026 - 03.05.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "03.05.2026 20:00",
+"ad": "Antalyaspor-Alanyaspor",
+"durum": "Bitti / 0-0",
+"sonuc": "X"
+},
+{
+"no": 2,
+"tarih": "03.05.2026 20:00",
+"ad": "Fatih Karagümrük-Gençlerbirliği",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 3,
+"tarih": "02.05.2026 20:00",
+"ad": "Fenerbahçe A.Ş.-Başakşehir FK",
+"durum": "Bitti / 3-1",
+"sonuc": "1"
+},
+{
+"no": 4,
+"tarih": "01.05.2026 20:00",
+"ad": "Gaziantep F.K. A.Ş.-Beşiktaş A.Ş.",
+"durum": "Bitti / 0-2",
+"sonuc": "2"
+},
+{
+"no": 5,
+"tarih": "03.05.2026 20:00",
+"ad": "Kasımpaşa A.Ş.-Kocaelispor",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 6,
+"tarih": "03.05.2026 20:00",
+"ad": "Kayserispor-Eyüpspor",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 7,
+"tarih": "01.05.2026 17:00",
+"ad": "Çaykur Rizespor A.Ş.-Konyaspor",
+"durum": "Bitti / 3-2",
+"sonuc": "1"
+},
+{
+"no": 8,
+"tarih": "02.05.2026 20:00",
+"ad": "Samsunspor A.Ş.-Galatasaray A.Ş.",
+"durum": "Bitti / 4-1",
+"sonuc": "1"
+},
+{
+"no": 9,
+"tarih": "02.05.2026 20:00",
+"ad": "Trabzonspor A.Ş.-Göztepe A.Ş.",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 10,
+"tarih": "02.05.2026 16:30",
+"ad": "Hoffenheim-Stuttgart",
+"durum": "Bitti / 3-3",
+"sonuc": "X"
+},
+{
+"no": 11,
+"tarih": "02.05.2026 19:30",
+"ad": "B. Leverkusen-Leipzig",
+"durum": "Bitti / 4-1",
+"sonuc": "1"
+},
+{
+"no": 12,
+"tarih": "03.05.2026 21:45",
+"ad": "Lyon-Rennes",
+"durum": "Bitti / 4-2",
+"sonuc": "1"
+},
+{
+"no": 13,
+"tarih": "03.05.2026 17:30",
+"ad": "Manchester United-Liverpool",
+"durum": "Bitti / 3-2",
+"sonuc": "1"
+},
+{
+"no": 14,
+"tarih": "02.05.2026 16:00",
+"ad": "Udinese-Torino",
+"durum": "Bitti / 2-0",
+"sonuc": "1"
+},
+{
+"no": 15,
+"tarih": "02.05.2026 19:00",
+"ad": "Como 1907-Napoli",
+"durum": "Bitti / 0-0",
+"sonuc": "X"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 0,
+"kazanc": 30137451.38
+},
+{
+"bilen": 14,
+"adet": 12,
+"kazanc": 1435116.73
+},
+{
+"bilen": 13,
+"adet": 250,
+"kazanc": 68885.6
+},
+{
+"bilen": 12,
+"adet": 2926,
+"kazanc": 7357.05
+}
+],
+"guncel": "2026-10-18 03:22"
+},
+"24.04.2026 - 27.04.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "24.04.2026 20:00",
+"ad": "Başakşehir FK-Kasımpaşa A.Ş.",
+"durum": "Bitti / 4-0",
+"sonuc": "1"
+},
+{
+"no": 2,
+"tarih": "25.04.2026 14:30",
+"ad": "Eyüpspor-Gaziantep F.K. A.Ş.",
+"durum": "Bitti / 3-0",
+"sonuc": "1"
+},
+{
+"no": 3,
+"tarih": "25.04.2026 17:00",
+"ad": "Kayserispor-Çaykur Rizespor A.Ş.",
+"durum": "Bitti / 2-0",
+"sonuc": "1"
+},
+{
+"no": 4,
+"tarih": "25.04.2026 20:00",
+"ad": "Göztepe A.Ş.-Antalyaspor",
+"durum": "Bitti / 2-0",
+"sonuc": "1"
+},
+{
+"no": 5,
+"tarih": "26.04.2026 14:30",
+"ad": "Gençlerbirliği-Kocaelispor",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 6,
+"tarih": "26.04.2026 20:00",
+"ad": "Galatasaray A.Ş.-Fenerbahçe A.Ş.",
+"durum": "Bitti / 3-0",
+"sonuc": "1"
+},
+{
+"no": 7,
+"tarih": "27.04.2026 17:00",
+"ad": "Alanyaspor-Samsunspor A.Ş.",
+"durum": "Bitti / 2-3",
+"sonuc": "2"
+},
+{
+"no": 8,
+"tarih": "27.04.2026 20:00",
+"ad": "Beşiktaş A.Ş.-Fatih Karagümrük",
+"durum": "Bitti / 0-0",
+"sonuc": "X"
+},
+{
+"no": 9,
+"tarih": "27.04.2026 20:00",
+"ad": "Konyaspor-Trabzonspor A.Ş.",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 10,
+"tarih": "25.04.2026 19:30",
+"ad": "Arsenal-Newcastle United",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 11,
+"tarih": "24.04.2026 22:00",
+"ad": "Real Betis-Real Madrid",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 12,
+"tarih": "25.04.2026 22:00",
+"ad": "Atletico Madrid-Athletic Bilbao",
+"durum": "Bitti / 3-2",
+"sonuc": "1"
+},
+{
+"no": 13,
+"tarih": "26.04.2026 22:00",
+"ad": "Villarreal-Celta Vigo",
+"durum": "Bitti / 2-1",
+"sonuc": "1"
+},
+{
+"no": 14,
+"tarih": "25.04.2026 19:00",
+"ad": "Bologna-AS Roma",
+"durum": "Bitti / 0-2",
+"sonuc": "2"
+},
+{
+"no": 15,
+"tarih": "26.04.2026 21:45",
+"ad": "AC Milan-Juventus",
+"durum": "Bitti / 0-0",
+"sonuc": "X"
+}
+],
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 7,
+"kazanc": 12003093.32
+},
+{
+"bilen": 14,
+"adet": 205,
+"kazanc": 124689.72
+},
+{
+"bilen": 13,
+"adet": 3341,
+"kazanc": 7650.82
+},
+{
+"bilen": 12,
+"adet": 34413,
+"kazanc": 928.47
+}
+],
+"guncel": "2026-10-18 03:22"
+}
+}
+}
