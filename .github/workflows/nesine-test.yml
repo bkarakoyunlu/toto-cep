@@ -1,0 +1,25 @@
+name: Nesine erişim testi
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/nesine-test.yml", "robot/nesine_test.py"]
+permissions:
+  contents: write
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install playwright==1.48.0 && python -m playwright install --with-deps chromium
+      - run: python robot/nesine_test.py
+      - name: Sonucu test dalına yaz
+        if: always()
+        run: |
+          mkdir -p /tmp/t && cp -r cikti/* /tmp/t/ 2>/dev/null || true
+          git config user.name "toto-robot"; git config user.email "toto-robot@users.noreply.github.com"
+          git checkout --orphan test-sonuc && git rm -rqf . && cp -r /tmp/t/* . && git add -A
+          git commit -qm "Nesine test sonucu" && git push -f origin test-sonuc
