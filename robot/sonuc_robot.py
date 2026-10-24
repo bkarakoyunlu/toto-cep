@@ -104,6 +104,11 @@ def main():
             haftalar[ar] = {**h, "guncel": simdi}
             degisti = True
     sira = [o["metin"] for o in secenek]
+    # Nesine programın adını değiştirdiyse (ör. 26.10 -> 27.10) aynı gün başlayan eski kaydı sil
+    for k in list(haftalar):
+        if k not in sira and any(o[:10] == k[:10] for o in sira):
+            del haftalar[k]
+            degisti = True
     haftalar = dict(sorted(haftalar.items(), key=lambda kv: sira.index(kv[0]) if kv[0] in sira else 999)[:60])
     if degisti or not DOSYA.exists():
         DOSYA.parent.mkdir(exist_ok=True)

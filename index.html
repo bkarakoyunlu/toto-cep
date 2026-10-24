@@ -182,11 +182,16 @@ async function yenile(sessiz){
   const eski=JSON.stringify(W);W=kur();YUKLENIYOR=false;SONHATA=hata;
   if(!sessiz||JSON.stringify(W)!==eski)ciz();else $("#alt").innerHTML=altSatir();
 }
+/* Nesine bazen programın adını değiştirir (ör. bir maç ertelenince "23.10 - 26.10" -> "23.10 - 27.10").
+   Aynı gün başlayan programlardan en son güncelleneni kullanılır. */
+function sonucBul(ar){const H=(SON&&SON.haftalar)||{};if(!ar)return null;const bas=String(ar).slice(0,10);
+  const aday=Object.entries(H).filter(([k])=>k===ar||k.slice(0,10)===bas).map(([,v])=>v);
+  return aday.sort((a,b)=>String(b.guncel||"").localeCompare(String(a.guncel||"")))[0]||null}
 function kur(){const W2={};
   Object.values(VERI).forEach(d=>(d.haftalar||[]).forEach(h=>{const id=h.aralik||h.ad;if(!id)return;
     const w=W2[id]=W2[id]||{id,ad:h.aralik||h.ad,aralik:h.aralik||"",maclar:h.maclar||[],kuponlar:[],sira:siraOf(h.aralik)||0,yS:h.sonuclar,yI:h.ikramiye};
     (h.kuponlar||[]).forEach(k=>{if(!w.kuponlar.find(x=>x.ad===k.ad))w.kuponlar.push({ad:k.ad||"Kupon",kolonlar:(k.kolonlar||[]).filter(c=>/^[1X2]{15}$/.test(c))})})}));
-  Object.values(W2).forEach(w=>{const r=SON&&SON.haftalar&&SON.haftalar[w.aralik];
+  Object.values(W2).forEach(w=>{const r=sonucBul(w.aralik);
     if(r&&r.maclar&&r.maclar.length>=15){w.sonuclar=r.maclar.slice(0,15).map(m=>m.sonuc||null);w.durum=r.maclar.map(m=>m.durum||"");w.tarih=r.maclar.map(m=>m.tarih||"");
       w.ikramiye={};(r.ikramiye||[]).forEach(x=>{w.ikramiye[x.bilen]=x.kazanc});w.guncel=r.guncel}
     else{w.sonuclar=Array.from({length:15},(_,i)=>(w.yS||[])[i]||null);w.ikramiye=w.yI||{}}
