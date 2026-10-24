@@ -1,0 +1,133 @@
+{
+ "toplam": 1223,
+ "anahtarlar": [
+  "sg",
+  "nsn"
+ ],
+ "sg_anahtar": [
+  "eventVersion",
+  "marketVersion",
+  "oddVersion",
+  "drawNo",
+  "FB",
+  "EA",
+  "EWMA",
+  "LA",
+  "BMV"
+ ],
+ "tip": "{(1, 1, False): 355, (1, 1, True): 308, (4, 4, False): 90, (2, 2, False): 72, (23, 23, False): 67, (5, 5, False): 64, (2, 2, True): 51, (-1, -1, False): 40}",
+ "ornek": [
+  {
+   "HN": "Crystal Palace (K)",
+   "AN": "Chelsea (K)",
+   "D": "25.10.2026",
+   "T": "15:00",
+   "TYPE": 1,
+   "GT": 1,
+   "LE": 0,
+   "C": 3236034
+  },
+  {
+   "HN": "Beşiktaş",
+   "AN": "Başakşehir",
+   "D": "26.10.2026",
+   "T": "19:00",
+   "TYPE": 1,
+   "GT": 1,
+   "LE": 1,
+   "C": 3241516
+  },
+  {
+   "HN": "Galatasaray",
+   "AN": "Fenerbahçe",
+   "D": "26.10.2026",
+   "T": "21:30",
+   "TYPE": 1,
+   "GT": 1,
+   "LE": 1,
+   "C": 3241596
+  },
+  {
+   "HN": "Beşiktaş (K)",
+   "AN": "Göztepe (K)",
+   "D": "25.10.2026",
+   "T": "13:00",
+   "TYPE": 23,
+   "GT": 23,
+   "LE": 0,
+   "C": 3282364
+  },
+  {
+   "HN": "Vakıfbank (K)",
+   "AN": "Galatasaray (K)",
+   "D": "25.10.2026",
+   "T": "14:00",
+   "TYPE": 23,
+   "GT": 23,
+   "LE": 0,
+   "C": 3282373
+  }
+ ],
+ "esles": [
+  {
+   "i": 0,
+   "bulundu": false
+  },
+  {
+   "i": 1,
+   "bulundu": false
+  },
+  {
+   "i": 2,
+   "bulundu": false
+  },
+  {
+   "i": 3,
+   "bulundu": false
+  },
+  {
+   "i": 4,
+   "bulundu": false
+  },
+  {
+   "i": 5,
+   "bulundu": false
+  },
+  {
+   "i": 6,
+   "bulundu": false
+  },
+  {
+   "i": 7,
+   "bulundu": false
+  },
+  {
+   "i": 8,
+   "bulundu": false
+  },
+  {
+   "i": 9,
+   "bulundu": false
+  },
+  {
+   "i": 10,
+   "bulundu": false
+  },
+  {
+   "i": 11,
+   "bulundu": false
+  },
+  {
+   "i": 12,
+   "bulundu": false
+  },
+  {
+   "i": 13,
+   "bulundu": false
+  },
+  {
+   "i": 14,
+   "bulundu": false
+  }
+ ]
+}
