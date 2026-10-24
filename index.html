@@ -59,6 +59,8 @@ main{padding-block:12px 96px;padding-left:max(16px,env(safe-area-inset-left,0px)
 .btn.bad{color:var(--bad)}
 .btn:focus-visible,.chip:focus-visible,.tab:focus-visible,.sb:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.tiles4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.tiles4 .tile{text-align:center;padding:8px 4px}.tiles4 .v{font-size:19px}
 .tile{background:var(--panel2);border-radius:10px;padding:8px 10px;min-width:0}
 .tile .l{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
 .tile .v{font-size:22px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.2}
@@ -125,9 +127,10 @@ td.d{background:var(--ok-soft);color:var(--ok)} td.y{background:var(--bad-soft);
 <main id="ana"></main>
 
 <nav class="tabbar" aria-label="Bölümler">
-  <button class="tab" data-t="takip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>Sonuç takibi</button>
+  <button class="tab" data-t="takip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>Takip</button>
+  <button class="tab" data-t="ihtimal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>İhtimaller</button>
   <button class="tab" data-t="kolon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16M15 4v16"/></svg>Kolonlar</button>
-  <button class="tab" data-t="arsiv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16v13H4zM2 3h20v4H2zM10 12h4"/></svg>Sonuç arşivi</button>
+  <button class="tab" data-t="arsiv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16v13H4zM2 3h20v4H2zM10 12h4"/></svg>Arşiv</button>
 </nav>
 <div id="sheet" hidden></div>
 <div id="toast" class="toast" hidden></div>
@@ -215,8 +218,8 @@ function ciz(){
   const w=hafta();
   $("#alt").innerHTML=w?`<span>${esc(w.aralik||"")}</span><span>${kuponlar(w).length} ekip · ${kuponlar(w).reduce((a,k)=>a+k.kolonlar.length,0)} kolon</span><span>${durumMetni()}</span>`:`<span>${durumMetni()}</span>`;
   const a=$("#ana");
-  if(!w&&SEKME!=="arsiv"){a.innerHTML=bosEkran();return}
-  a.innerHTML=SEKME==="takip"?takipEkran(w):SEKME==="kolon"?kolonEkran(w):arsivEkran();
+  if(!w){a.innerHTML=bosEkran();return}
+  a.innerHTML=SEKME==="ihtimal"?ihtimalEkran(w):SEKME==="kolon"?kolonEkran(w):SEKME==="arsiv"?arsivEkran():takipEkran(w);
 }
 function bosEkran(){const L=erisimler();
   if(YUKLENIYOR&&!Object.keys(W).length)return `<div class="card empty"><b>Yükleniyor…</b>Kolonlar ve sonuçlar getiriliyor.</div>`;
@@ -225,12 +228,80 @@ function bosEkran(){const L=erisimler();
   const sorun=L.filter(e=>e.durum&&e.durum!=="ok");
   return `<div class="card empty"><b>Henüz yayınlanmış kolon yok</b>${sorun.length?sorun.map(e=>esc(erisimSorun(e))).join("<br>"):"Bilgisayardaki Toto Masası'nda <b>Sonuç takibi → 📱 Telefona yayınla</b> ile kolonlar buraya gelir."}</div>`}
 function kupSecici(w){const K=kuponlar(w);return K.length>1?`<div class="chips">${["hepsi",...K.map(k=>k.ad)].map(a=>`<button class="chip ${(KSEC==="hepsi"?"hepsi":KSEC)===a||(a==="hepsi"&&!K.find(k=>k.ad===KSEC))?"on":""}" data-k="${esc(a)}">${a==="hepsi"?`Hepsi (${K.length})`:esc(a)}</button>`).join("")}</div>`:""}
-/* ---------- senaryolar: deneme modu, maç maç etki, tüm kombinasyonlar */
-let DENEME=null,SEN={};
-function birlesik(w){const s=(w.sonuclar||Array(15).fill(null)).slice();if(DENEME)DENEME.forEach((x,i)=>{if(x&&!s[i])s[i]=x});return s}
+/* ---------- yardımcılar: kolon dağılımı = yüzdeler, ihtimal simülasyonu */
+let SEN={},IHT={},SECIM={},IFILTRE="12";
+function hepsiKol(K){return K.flatMap(k=>k.kolonlar)}
+function yuzdeTahmin(cs){const P=Array.from({length:15},()=>[0,0,0]);cs.forEach(c=>{for(let i=0;i<15;i++)P[i][O.indexOf(c[i])]++});return P.map(a=>{const t=a[0]+a[1]+a[2]||1;return a.map(x=>x/t)})}
+function sansSay(cs,son){const r={12:0,13:0,14:0,15:0};cs.forEach(c=>{const t=kolonOz(c,son).tavan;if(t>=12)r[12]++;if(t>=13)r[13]++;if(t>=14)r[14]++;if(t>=15)r[15]++});return r}
+function bilenSay(cs,son){const r={12:0,13:0,14:0,15:0};cs.forEach(c=>{const d=kolonOz(c,son).d;if(d>=12)r[Math.min(d,15)]++});return r}
+function ihtimal(cs,son,anahtar){if(IHT[anahtar])return IHT[anahtar];
+  const P=yuzdeTahmin(cs),N=cs.length,acik=son.map((s,i)=>s?-1:i).filter(i=>i>=0);
+  const taban=new Int8Array(N);cs.forEach((c,j)=>{let d=0;for(let i=0;i<15;i++)if(son[i]&&c[i]===son[i])d++;taban[j]=d});
+  const L=acik.map(i=>{const a=[[],[],[]];cs.forEach((c,j)=>a[O.indexOf(c[i])].push(j));return a.map(x=>Int32Array.from(x))});
+  const sim=Math.round(Math.min(20000,Math.max(3000,6e6/Math.max(1,N*Math.max(1,acik.length))))),ust=[0,0,0,0],h=new Int8Array(N);
+  for(let s=0;s<sim;s++){h.set(taban);
+    for(let q=0;q<acik.length;q++){const p=P[acik[q]],u=Math.random(),o=u<p[0]?0:u<p[0]+p[1]?1:2;const l=L[q][o];for(let z=0;z<l.length;z++)h[l[z]]++}
+    let mx=0;for(let j=0;j<N;j++)if(h[j]>mx)mx=h[j];for(let t=0;t<4;t++)if(mx>=12+t)ust[t]++}
+  return IHT[anahtar]={p:ust.map(v=>v/sim),sim}}
+const yz=x=>x==null?"—":x<=0?"%0":x<0.001?"<%0,1":"%"+(x*100).toLocaleString("tr-TR",{maximumFractionDigits:x<0.1?1:0});
+function dortKutu(baslik,degerler,alt,vurgu){return `<div class="small muted" style="margin:12px 0 6px">${baslik}</div><div class="tiles4">${[12,13,14,15].map((b,i)=>`<div class="tile ${vurgu&&degerler[i]&&degerler[i]!=="0"&&degerler[i]!=="%0"?"ok":""}"><div class="l">${b}${b<15?"+":""}</div><div class="v">${degerler[i]}</div></div>`).join("")}</div>${alt?`<div class="small muted" style="margin-top:6px">${alt}</div>`:""}`}
+function macDurumu(w,i){const d=(w.durum||[])[i]||"",s=(w.sonuclar||[])[i];if(s||/^bitti/i.test(d))return"bitti";return d?"suruyor":"baslamadi"}
+function skor(w,i){const d=(w.durum||[])[i]||"";const m=d.split("/");return m.length>1?m[1].trim():""}
+
+/* ---------- Sonuç takibi (sade) */
+function takipEkran(w){
+  const son=(w.sonuclar||Array(15).fill(null)).slice(),K=secili(w),cs=hepsiKol(K),o=ozet(K,son),tut=o.n*KF,bitti=o.biten===15;
+  const kz=bitti?kazanc(w,o.bilen):null,sans=sansSay(cs,son);
+  let h=kupSecici(w);
+  h+=`<div class="card"><h2>${esc(KSEC==="hepsi"&&K.length>1?"Tüm ekipler":K.length===1?K[0].ad:"Tüm ekipler")}<span class="s num">${o.n} kolon · ${tl(tut)}</span></h2>
+    <div class="tiles">
+      <div class="tile ${o.biten&&o.en>=12?"ok":""}"><div class="l">Şu an en iyi</div><div class="v">${o.biten?o.en:"—"}<small> / ${o.biten}</small></div><div class="small muted">biten maç ${o.biten}/15</div></div>
+      <div class="tile"><div class="l">${bitti?"Kazanç":"Kalan maç"}</div><div class="v">${bitti?(kz!=null?tl(kz):"—"):15-o.biten}</div><div class="small muted">${bitti?(kz!=null?`net ${tl(kz-tut)}`:"ikramiye bekleniyor"):"sonuç bekleniyor"}</div></div>
+    </div>
+    ${bitti?dortKutu("Bilen kolon sayısı",[12,13,14,15].map(b=>String(bilenSay(cs,son)[b])),"",true)
+      :dortKutu("Bilme şansı olan kolon sayısı",[12,13,14,15].map(b=>String(sans[b])),"Biten maçlara göre o sayıya hâlâ ulaşabilen kolonlar.",true)+
+       dortKutu("Bilme ihtimali (en az bir kolonun)",ihtimal(cs,son,"t|"+w.id+"|"+KSEC+"|"+son.map(x=>x||"-").join("")).p.map(yz),"Biten maçlar sabit; kalan maçlar kolonlarındaki 1/X/2 dağılımına (yani yüzdelerine) göre.",true)}
+    ${K.length>1?`<div class="small" style="margin-top:12px;display:grid;gap:4px">${K.map(k=>{const s2=sansSay(k.kolonlar,son),x=ozet([k],son);return `<div class="row" style="justify-content:space-between"><span>${esc(k.ad)}</span><span class="num muted">${k.kolonlar.length} kolon · en iyi ${x.biten?x.en:"—"} · 12+ şansı ${s2[12]}</span></div>`}).join("")}</div>`:""}
+  </div>`;
+  h+=`<div class="card"><h2>Maçlar</h2>${(w.maclar||Array(15).fill("")).map((ad,i)=>{const s=son[i],n=cs.length,dur=macDurumu(w,i);
+      const tut=s&&n?cs.filter(c=>c[i]===s).length/n:null;
+      return `<div class="mac"><div class="no">${i+1}</div><div class="ad"><b>${esc(ad||`${i+1}. maç`)}</b><div class="small muted">${macDurum(w,i)}${tut!=null?` · kolonların <b style="color:var(${tut>=.5?"--ok":"--bad"})">%${Math.round(tut*100)}</b>'i tuttu`:""}</div></div>
+        <div>${s?`<span class="k k${s}" style="width:30px;height:28px">${s}</span>`:dur==="suruyor"?'<span class="pill warn">oynanıyor</span>':'<span class="muted small">—</span>'}</div></div>`}).join("")}</div>`;
+  return h}
+
+/* ---------- İhtimaller: elle seçim (ya böyle olursa) */
+function secim(w){if(!SECIM[w.id])SECIM[w.id]=(w.sonuclar||Array(15).fill(null)).slice();return SECIM[w.id]}
+function ihtimalEkran(w){
+  const sec=secim(w),K=secili(w),cs=hepsiKol(K),sayi=sec.filter(Boolean).length,sans=sansSay(cs,sec);
+  const anahtar="i|"+w.id+"|"+KSEC+"|"+sec.map(x=>x||"-").join("");
+  let h=kupSecici(w);
+  h+=`<div class="card"><h2>Ya böyle olursa?<span class="s">${sayi}/15 maç seçili</span></h2>
+    <div class="small muted">Her maça istediğin sonucu seç: bitmiş, oynanan ya da başlamamış fark etmez. Gerçek sonuçlar değişmez, bu sadece deneme.</div>
+    <div class="row" style="margin-top:10px"><button class="btn" id="ihGercek">Gerçek sonuçlarla doldur</button><button class="btn" id="ihTemiz">Temizle</button></div>
+    ${sayi===15?dortKutu("Bu sonuçlarla bilen kolon sayısı",[12,13,14,15].map(b=>String(bilenSay(cs,sec)[b])),"",true)
+      :dortKutu("Bilme şansı olan kolon sayısı",[12,13,14,15].map(b=>String(sans[b])),"Seçtiğin sonuçlarla o sayıya hâlâ ulaşabilen kolonlar.",true)+
+       dortKutu("Bilme ihtimali (en az bir kolonun)",ihtimal(cs,sec,anahtar).p.map(yz),"Seçmediğin maçlar kolonlarındaki dağılıma (yüzdelerine) göre.",true)}
+  </div>`;
+  h+=`<div class="card"><h2>Maçlar<span class="s">dokunarak seç, tekrar dokununca kalkar</span></h2>${(w.maclar||Array(15).fill("")).map((ad,i)=>{const g=(w.sonuclar||[])[i],dur=macDurumu(w,i);
+    return `<div class="mac"><div class="no">${i+1}</div><div class="ad"><b>${esc(ad||`${i+1}. maç`)}</b><div class="small muted">${dur==="bitti"?`bitti${g?` · gerçek: ${g}`:""}${skor(w,i)?" · "+esc(skor(w,i)):""}`:dur==="suruyor"?"oynanıyor "+esc(skor(w,i)):esc((w.tarih||[])[i]||"başlamadı")}</div></div>
+      <div class="sbs">${[..."1X2"].map(x=>`<button class="sb s${x} ${sec[i]===x?"on":""}" data-i="${i}" data-o="${x}" aria-label="${i+1}. maç ${x}">${x}</button>`).join("")}</div></div>`}).join("")}</div>`;
+  /* seçime göre kolonlar */
+  const esik={"12":12,"13":13,"14":14,"15":15}[IFILTRE]||12;
+  const R=[];K.forEach(k=>k.kolonlar.forEach((c,j)=>{const o=kolonOz(c,sec);if(o.tavan>=esik)R.push({ad:k.ad,no:j+1,c,...o})}));
+  R.sort((a,b)=>b.d-a.d||a.no-b.no);
+  h+=`<div class="card"><h2>Şansı olan kolonlar</h2>
+    <div class="chips" style="margin-bottom:8px">${["12","13","14","15"].map(x=>`<button class="chip fz ${IFILTRE===x?"on":""}" data-f="${x}">${x}${x!=="15"?"+":""} (${sans[+x]})</button>`).join("")}</div>
+    ${R.length?`<div class="tbl"><table><thead><tr><th>Kolon</th>${Array.from({length:15},(_,i)=>`<th>${i+1}</th>`).join("")}<th>D</th><th>T</th></tr></thead><tbody>
+      ${R.slice(0,50).map(r=>`<tr><td style="text-align:left">${K.length>1?`<span class="muted small">${esc(r.ad)} </span>`:""}K${r.no}</td>${[...r.c].map((x,i)=>`<td class="h ${sec[i]?(sec[i]===x?"d":"y"):""}">${x}</td>`).join("")}<td><b>${r.d}</b></td><td>${r.tavan}</td></tr>`).join("")}
+      </tbody></table></div>${R.length>50?`<div class="small muted" style="margin-top:6px">${R.length} kolon · en çok bilen 50'si gösteriliyor; hepsi için Kolonlar sekmesi</div>`:""}`:'<div class="small muted">Bu seçimle bu sayıya ulaşabilen kolon yok.</div>'}</div>`;
+  h+=senaryoKart(w,K,sec)+etkiKart(w,K,sec);
+  return h}
+
+/* ---------- senaryolar ve maç maç etki (İhtimaller sekmesinde) */
 function etki(K,son){const cs=K.flatMap(k=>k.kolonlar),yan=cs.map(c=>kolonOz(c,son).y),R=[];
   son.forEach((s,i)=>{if(s)return;const v=[..."1X2"].map(o=>{let t12=0,t13=0,tav=0;cs.forEach((c,j)=>{const t=15-yan[j]-(c[i]===o?0:1);if(t>=12)t12++;if(t>=13)t13++;if(t>tav)tav=t});return {o,t12,t13,tav}});
     R.push({i,v,fark:Math.max(...v.map(x=>x.t12))-Math.min(...v.map(x=>x.t12))})});return R}
+
 function senaryoAnahtar(w,son){return w.id+"|"+KSEC+"|"+son.map(x=>x||"-").join("")}
 function senaryoHesapla(K,son){
   const kal=son.map((s,i)=>s?-1:i).filter(i=>i>=0),k=kal.length,m=new Map();
@@ -258,71 +329,43 @@ function etkiKart(w,K,son){if(!K.length)return "";const E=etki(K,son);if(!E.leng
   return `<div class="card"><h2>Maç maç etkisi<span class="s">en kritik maç üstte</span></h2><div class="tbl"><table class="et"><thead><tr><th style="text-align:left">Maç</th><th><span class="k k1">1</span></th><th><span class="k kX">X</span></th><th><span class="k k2">2</span></th></tr></thead><tbody>
     ${E.map(e=>`<tr><td style="text-align:left;max-width:84px;overflow:hidden;text-overflow:ellipsis;padding-right:6px">${e.i+1}. ${esc((w.maclar||[])[e.i]||"")}</td>${e.v.map(x=>`<td style="background:var(${x.t12?"--ok-soft":"--bad-soft"})"><b style="color:var(${x.t12?"--ok":"--bad"});font-size:15px">${x.t12}</b><div class="muted" style="font-size:11px">13+ ${x.t13} · T${x.tav}</div></td>`).join("")}</tr>`).join("")}
     </tbody></table></div><div class="small muted" style="margin-top:6px">Büyük sayı: o sonuç gelirse 12+ şansı kalan kolon sayısı. 13+: 13 şansı kalan. T: tavan. Kritik maç: sonuca göre farkın en büyük olduğu maç.</div></div>`}
-function takipEkran(w){
-  const son=birlesik(w),gercek=w.sonuclar||Array(15).fill(null),K=secili(w),o=ozet(K,son),tut=o.n*KF,kz=o.biten===15?kazanc(w,o.bilen):null;
-  let h=kupSecici(w);
-  h+=`<div class="card"><h2>${esc(KSEC==="hepsi"||K.length>1?"Tüm ekipler":K[0].ad)}<span class="s num">${o.n} kolon · ${tl(tut)}</span></h2>
-    <div class="tiles">
-      <div class="tile ${o.biten&&o.en>=12?"ok":""}"><div class="l">Şu an en iyi</div><div class="v">${o.biten?o.en:"—"}<small> / ${o.biten}</small></div><div class="small muted">biten maç ${o.biten}/15</div></div>
-      <div class="tile"><div class="l">Tavan</div><div class="v">${o.tavan}</div><div class="small muted">en iyi kolonun ulaşabileceği</div></div>
-      <div class="tile ${o.t12?"ok":""}"><div class="l">12+ şansı olan</div><div class="v">${o.t12}<small> kolon</small></div><div class="small muted">13+ şansı: ${o.t13}</div></div>
-      <div class="tile"><div class="l">${o.biten===15?"Kazanç":"Kalan maç"}</div><div class="v">${o.biten===15?(kz!=null?tl(kz):"—"):15-o.biten}</div><div class="small muted">${o.biten===15?(kz!=null?`net ${tl(kz-tut)}`:"ikramiye bekleniyor"):"sonuç bekleniyor"}</div></div>
-    </div>
-    ${o.biten===15&&Object.keys(o.bilen).length?`<div class="small" style="margin-top:10px">Bilen: ${Object.entries(o.bilen).sort((a,b)=>b[0]-a[0]).map(([b,n])=>`<b>${b}</b> bilen ×${n}`).join(" · ")}</div>`:""}
-    ${K.length>1?`<div class="small muted" style="margin-top:10px;display:grid;gap:3px">${K.map(k=>{const x=ozet([k],son);return `<div class="row" style="justify-content:space-between"><span>${esc(k.ad)}</span><span class="num">${k.kolonlar.length} kolon · en iyi ${x.biten?x.en:"—"} · 12+ şansı ${x.t12}</span></div>`}).join("")}</div>`:""}
-  </div>`;
-  if(DENEME)h+=`<div class="note warn row" style="justify-content:space-between"><span><b>Deneme modu açık.</b> İşaretlediğin sonuçlar kaydedilmez, sadece "ya böyle olursa" hesaplanır.</span><button class="btn" id="denKapat">Kapat</button></div>`;
-  h+=senaryoKart(w,K,son)+etkiKart(w,K,son);
-  /* maçlar + sonuç girişi + hangi sonuç daha iyi */
-  const alive=K.flatMap(k=>k.kolonlar).filter(c=>kolonOz(c,son).tavan>=12);
-  h+=`<div class="card"><h2>Maçlar ve sonuçlar<span class="s">sonuçlar otomatik gelir</span></h2>
-    <div class="row" style="margin-bottom:6px"><button class="btn" id="denAc">${DENEME?"🧪 Denemeyi kapat":"🧪 Ya böyle olursa?"}</button></div>
-    ${(w.maclar||Array(15).fill("")).map((ad,i)=>{
-      const dag=[0,0,0],al=[0,0,0];let n=0;K.forEach(k=>k.kolonlar.forEach(c=>{dag[O.indexOf(c[i])]++;n++}));alive.forEach(c=>al[O.indexOf(c[i])]++);
-      const s=son[i],tut=s&&n?dag[O.indexOf(s)]/n:null;
-      const iyi=!s&&alive.length?O[al.indexOf(Math.max(...al))]:null;
-      return `<div class="mac"><div class="no">${i+1}</div><div class="ad"><b>${esc(ad||`${i+1}. maç`)}</b><div class="small muted">${macDurum(w,i)}</div>
-        <div class="small muted">${s?`kolonların <b class="${tut>=.5?"":""}" style="color:var(${tut>=.5?"--ok":"--bad"})">%${Math.round(tut*100)}</b> tuttu`:iyi?`12+ için en çok <span class="k k${iyi}" style="height:18px;min-width:20px;font-size:11px">${iyi}</span> gelmeli (${al[O.indexOf(iyi)]} kolon)`:"—"}</div>
-        ${n?`<div class="bar"><i style="width:${100*dag[0]/n}%;background:var(--c1)"></i><i style="width:${100*dag[1]/n}%;background:var(--cx)"></i><i style="width:${100*dag[2]/n}%;background:var(--c2)"></i></div>`:""}</div>
-        <div class="sbs">${[..."1X2"].map(x=>`<button class="sb s${x} ${s===x?"on":""} ${DENEME&&!gercek[i]&&DENEME[i]===x?"dn":""}" data-i="${i}" data-o="${x}" aria-label="${i+1}. maç ${x}">${x}</button>`).join("")}</div></div>`}).join("")}
-    <div class="small muted" style="margin-top:8px">Çubuk: kolonlarında 1 / X / 2 oranı. "12+ için" ipucu, hâlâ 12 bilme şansı olan kolonlara göre.</div></div>`;
-  return h}
 function kolonEkran(w){
-  const son=birlesik(w),K=secili(w);let R=[];
+  const son=(w.sonuclar||Array(15).fill(null)).slice(),K=secili(w);let R=[];
   K.forEach(k=>k.kolonlar.forEach((c,j)=>{const o=kolonOz(c,son);R.push({ad:k.ad,no:j+1,c,...o})}));
-  if(FILTRE==="12")R=R.filter(r=>r.tavan>=12);if(FILTRE==="13")R=R.filter(r=>r.tavan>=13);
+  if(["12","13","14","15"].includes(FILTRE))R=R.filter(r=>r.tavan>=+FILTRE);
   if(ARA){const q=ARA.toUpperCase().replace(/\s/g,"");R=R.filter(r=>("K"+r.no)===q||r.c.includes(q))}
   R.sort((a,b)=>b.d-a.d||b.tavan-a.tavan||a.no-b.no);
   const goster=R.slice(0,300);
   return `${kupSecici(w)}<div class="card"><div class="row" style="margin-bottom:10px">
-      <select id="filtre" class="btn" aria-label="Filtre"><option value="hepsi" ${FILTRE==="hepsi"?"selected":""}>Tüm kolonlar</option><option value="12" ${FILTRE==="12"?"selected":""}>12+ şansı olanlar</option><option value="13" ${FILTRE==="13"?"selected":""}>13+ şansı olanlar</option></select>
+      <select id="filtre" class="btn" aria-label="Filtre"><option value="hepsi" ${FILTRE==="hepsi"?"selected":""}>Tüm kolonlar</option><option value="12" ${FILTRE==="12"?"selected":""}>12+ şansı olanlar</option><option value="13" ${FILTRE==="13"?"selected":""}>13+ şansı olanlar</option><option value="14" ${FILTRE==="14"?"selected":""}>14+ şansı olanlar</option><option value="15" ${FILTRE==="15"?"selected":""}>15 şansı olanlar</option></select>
       <input id="ara" class="btn" style="flex:1;min-width:120px;font-weight:400" placeholder="Ara: K15 ya da 1X2…" value="${esc(ARA)}"></div>
     <div class="small muted" style="margin-bottom:6px">${R.length} kolon${R.length>300?" · ilk 300 gösteriliyor":""} · en çok doğru bilen üstte</div>
     <div class="tbl"><table><thead><tr><th>Kolon</th>${Array.from({length:15},(_,i)=>`<th>${i+1}</th>`).join("")}<th>D</th><th>Tavan</th></tr></thead><tbody>
     ${goster.map(r=>`<tr><td style="text-align:left">${K.length>1?`<span class="muted small">${esc(r.ad)} </span>`:""}K${r.no}</td>${[...r.c].map((x,i)=>`<td class="h ${son[i]?(son[i]===x?"d":"y"):""}">${x}</td>`).join("")}<td><b>${r.d}</b></td><td style="color:var(${r.tavan>=12?"--ok":"--muted"})">${r.tavan}</td></tr>`).join("")}
     </tbody></table></div></div>`}
 function arsivEkran(){
-  const ids=Object.keys(W).sort((a,b)=>(W[b].sira||0)-(W[a].sira||0));
-  if(!ids.length)return bosEkran();
-  return `<div class="card"><h2>Sonuç arşivi<span class="s">${ids.length} hafta</span></h2><div class="list">${ids.map(id=>{const w=W[id],son=w.sonuclar||[],o=ozet(kuponlar(w),son),tut=o.n*KF,kz=o.biten===15?kazanc(w,o.bilen):null;
-    return `<div class="li" data-h="${esc(id)}"><div class="m"><b>${esc(w.ad||w.aralik)}</b><div class="small muted num">${kuponlar(w).map(k=>esc(k.ad)).join(", ")} · ${o.n} kolon · ${tl(tut)}</div>
-      <div class="small num">${o.biten===15?`en iyi <b>${o.en}</b>${Object.keys(o.bilen).length?" · "+Object.entries(o.bilen).sort((a,b)=>b[0]-a[0]).map(([b,n])=>`${b} bilen ×${n}`).join(", "):""}`:`${o.biten}/15 maç bitti · en iyi ${o.biten?o.en:"—"}`}</div></div>
-      <div style="text-align:right">${o.biten===15?(kz!=null?`<span class="pill ${kz>=tut?"ok":"bad"}">${kz>=tut?"+":""}${tl(kz-tut)}</span>`:'<span class="pill mut">bitti</span>'):'<span class="pill mut">sürüyor</span>'}</div></div>`}).join("")}</div></div>
-    `}
+  const w=hafta();if(!w)return bosEkran();
+  const son=w.sonuclar||[],K=kuponlar(w),cs=hepsiKol(K),o=ozet(K,son),tut=o.n*KF,kz=o.biten===15?kazanc(w,o.bilen):null;
+  const idx=(w.maclar||[]).map((_,i)=>i),bas=idx.filter(i=>macDurumu(w,i)!=="baslamadi"),bek=idx.length-bas.length;
+  return `<div class="card"><h2>${esc(w.ad||w.aralik)}<span class="s">${o.biten}/15 maç bitti</span></h2>
+    <div class="small num">${o.biten===15?`en iyi <b>${o.en}</b>${Object.keys(o.bilen).length?" · "+Object.entries(o.bilen).sort((a,b)=>b[0]-a[0]).map(([b,n])=>`${b} bilen ×${n}`).join(", "):""}${kz!=null?` · <span class="pill ${kz>=tut?"ok":"bad"}">${kz>=tut?"+":""}${tl(kz-tut)}</span>`:""}`:`şu an en iyi ${o.biten?o.en:"—"} · ${o.n} kolon`}</div></div>
+    <div class="card"><h2>Başlayan ve biten maçlar</h2>${bas.length?bas.map(i=>{const s=son[i],dur=macDurumu(w,i),tutan=s&&cs.length?cs.filter(c=>c[i]===s).length/cs.length:null;
+      return `<div class="mac"><div class="no">${i+1}</div><div class="ad"><b>${esc((w.maclar||[])[i]||"")}</b><div class="small muted">${esc((w.tarih||[])[i]||"")}${skor(w,i)?" · <b>"+esc(skor(w,i))+"</b>":""}${tutan!=null?` · kolonların %${Math.round(tutan*100)}'i`:""}</div></div>
+        <div>${dur==="bitti"&&s?`<span class="k k${s}" style="width:30px;height:28px">${s}</span>`:'<span class="pill warn">oynanıyor</span>'}</div></div>`}).join(""):'<div class="small muted">Henüz başlayan maç yok.</div>'}
+      ${bek?`<div class="small muted" style="margin-top:8px">${bek} maç henüz başlamadı.</div>`:""}</div>`}
 
 /* ---------- etkileşim */
 document.addEventListener("click",async e=>{
   const t=e.target.closest("button,.li");if(!t)return;
   if(t.classList.contains("tab")){SEKME=t.dataset.t;ls("cepSekme",SEKME);ciz();window.scrollTo(0,0);return}
   if(t.classList.contains("chip")){KSEC=t.dataset.k;ls("cepKupon",KSEC);ciz();return}
-  if(t.classList.contains("li")){AKTIF=t.dataset.h;DENEME=null;ls("cepHafta",AKTIF);SEKME="takip";ls("cepSekme",SEKME);ciz();window.scrollTo(0,0);return}
-  if(t.id==="denAc"||t.id==="denKapat"){DENEME=DENEME?null:Array(15).fill(null);ciz();return}
-  if(t.id==="senBtn"){const w=hafta(),son=birlesik(w),K=secili(w);t.disabled=true;t.textContent="Hesaplanıyor…";setTimeout(()=>{SEN[senaryoAnahtar(w,son)]=senaryoHesapla(K,son);ciz()},30);return}
-  if(t.classList.contains("sb")&&DENEME){const w=hafta(),i=+t.dataset.i,o=t.dataset.o;if((w.sonuclar||[])[i]){toast("Bu maçın gerçek sonucu girili; deneme sadece biten olmayan maçlarda.");return}DENEME[i]=DENEME[i]===o?null:o;ciz();return}
-  if(t.classList.contains("sb")){toast("Sonuçlar Nesine'den otomatik geliyor. Denemek için 🧪 Ya böyle olursa?");return}
-  if(t.classList.contains("sb_eski")){const w=hafta(),i=+t.dataset.i,o=t.dataset.o;w.sonuclar=w.sonuclar||Array(15).fill(null);w.sonuclar[i]=w.sonuclar[i]===o?null:o;ciz();await kaydet(w);return}
+  if(t.classList.contains("fz")){IFILTRE=t.dataset.f;ciz();return}
+  if(t.id==="ihGercek"){const w=hafta();SECIM[w.id]=(w.sonuclar||Array(15).fill(null)).slice();ciz();return}
+  if(t.id==="ihTemiz"){const w=hafta();SECIM[w.id]=Array(15).fill(null);ciz();return}
+  if(t.id==="senBtn"){const w=hafta(),son=secim(w),K=secili(w);t.disabled=true;t.textContent="Hesaplanıyor…";setTimeout(()=>{SEN[senaryoAnahtar(w,son)]=senaryoHesapla(K,son);ciz()},30);return}
+  if(t.classList.contains("sb")){const w=hafta(),sec=secim(w),i=+t.dataset.i,o=t.dataset.o;sec[i]=sec[i]===o?null:o;const y=window.scrollY;ciz();window.scrollTo(0,y);return}
 });
-$("#haftaSec").onchange=e=>{AKTIF=e.target.value;DENEME=null;ls("cepHafta",AKTIF);ciz()};
+$("#haftaSec").onchange=e=>{AKTIF=e.target.value;ls("cepHafta",AKTIF);ciz()};
 $("#yenileBtn").onclick=()=>{yenile(false);toast("Yenileniyor…")};
 $("#ayarBtn").onclick=()=>ayarAc();
 document.addEventListener("change",e=>{if(e.target.id==="filtre"){FILTRE=e.target.value;ciz()}});
