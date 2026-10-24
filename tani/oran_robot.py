@@ -87,7 +87,7 @@ def eslestir(veri, maclar, program_araligi=""):
     sinir = _aralik(program_araligi)
     adaylar = []
     for ev in (veri.get("sg") or {}).get("EA") or []:
-        if ev.get("TYPE") != 1 or ev.get("GT") != 1 or ev.get("LE"):
+        if ev.get("TYPE") != 1 or ev.get("GT") != 1:   # LE = "canlı bahis açılacak" işareti; maçı dışlamaz
             continue
         if sinir:
             try:
