@@ -1,5 +1,5 @@
 {
-"guncel": "2026-10-26 20:50",
+"guncel": "2026-10-26 21:32",
 "kaynak": "nesine.com/sportoto",
 "haftalar": {
 "23.10.2026 - 27.10.2026": {
@@ -50,22 +50,22 @@
 "no": 7,
 "tarih": "26.10.2026 19:00",
 "ad": "Beşiktaş A.Ş.-Başakşehir FK",
-"durum": "90+182' / 2-0",
+"durum": "Bitti / 2-0",
 "sonuc": "1"
 },
 {
 "no": 8,
 "tarih": "26.10.2026 19:00",
 "ad": "Çaykur Rizespor A.Ş.-Trabzonspor A.Ş.",
-"durum": "90+182' / 3-4",
+"durum": "Bitti / 3-4",
 "sonuc": "2"
 },
 {
 "no": 9,
 "tarih": "26.10.2026 21:30",
 "ad": "Galatasaray A.Ş.-Fenerbahçe A.Ş.",
-"durum": "",
-"sonuc": null
+"durum": "45+136' / 0-0",
+"sonuc": "X"
 },
 {
 "no": 10,
@@ -111,7 +111,7 @@
 }
 ],
 "ikramiye": [],
-"guncel": "2026-10-26 20:50"
+"guncel": "2026-10-26 21:32"
 },
 "16.10.2026 - 19.10.2026": {
 "maclar": [
