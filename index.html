@@ -112,6 +112,34 @@ td.d{background:var(--ok-soft);color:var(--ok)} td.y{background:var(--bad-soft);
 .li:first-child{border-top:0}
 .li .m{flex:1;min-width:0}
 @media (prefers-reduced-motion:no-preference){.sheet .in{animation:up .18s ease-out}@keyframes up{from{transform:translateY(24px);opacity:.6}}}
+/* Analiz (bilgisayardan gelen salt okunur içerik) */
+.amac{display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:10px;align-items:center;width:100%;text-align:left;border:0;border-top:1px solid var(--line);background:none;padding:10px 0;cursor:pointer;color:inherit}
+.amac:first-of-type{border-top:0}
+.amac .no{color:var(--muted);font-size:12px;text-align:right}
+.amac b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.amac .sag{text-align:right;font-variant-numeric:tabular-nums;font-size:13px}
+.asekler{display:flex;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 92px);z-index:3;background:var(--bg);padding-top:6px;margin-top:-6px}
+.asek{flex:0 0 auto;border:1px solid var(--line);background:var(--panel);border-radius:20px;padding:6px 12px;font-size:13px;font-weight:600;cursor:pointer;color:inherit}
+.asek.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.akv{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 12px;font-size:13px;align-items:center}
+.akv .l{color:var(--muted);font-size:12px}
+.az{font-size:13.5px;overflow-wrap:break-word}
+.az td>span[style*="border-radius"]{white-space:nowrap}
+.az [style*="grid-template-columns"]{grid-template-columns:minmax(0,1fr)!important}
+.az [style*="min-width"]{min-width:0!important}
+.az .card{padding:10px 12px;border-radius:12px;margin:0}
+.az .tbl-wrap,.az .tbl{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.az table{font-size:12.5px}
+.az th{position:static;text-transform:none;letter-spacing:0;white-space:nowrap}
+.az td{white-space:normal;vertical-align:top}
+.az .dtab td,.az .dtab th{text-align:right;padding:5px 5px}
+.az .dtab td:first-child,.az .dtab th:first-child{text-align:left}
+.az .note{margin-top:8px}.az .note.info{color:var(--muted)}
+.az .pos{color:var(--ok)}.az .neg{color:var(--bad)}
+.az .spacer{flex:1}
+.az h4{margin:14px 0 6px;font-size:14px}
+.az details{margin-top:8px}.az summary{cursor:pointer}
+.az .k{min-width:20px;height:20px;font-size:12px}
 </style>
 </head>
 <body>
@@ -130,6 +158,7 @@ td.d{background:var(--ok-soft);color:var(--ok)} td.y{background:var(--bad-soft);
   <button class="tab" data-t="takip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>Takip</button>
   <button class="tab" data-t="ihtimal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>İhtimaller</button>
   <button class="tab" data-t="kolon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16M15 4v16"/></svg>Kolonlar</button>
+  <button class="tab" data-t="analiz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5M8 11h6M11 8v6"/></svg>Analiz</button>
   <button class="tab" data-t="arsiv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16v13H4zM2 3h20v4H2zM10 12h4"/></svg>Arşiv</button>
 </nav>
 <div id="sheet" hidden></div>
@@ -169,15 +198,24 @@ async function coz(obj,sifre){
   return JSON.parse(new TextDecoder().decode(pt))}
 
 /* ---------- veri: herkese açık sonuçlar + şifreli ekip dosyaları */
-let SON=null,VERI={},YUKLENIYOR=false,SONHATA=null,KONTROL=null;
+let SON=null,VERI={},ANALIZ={},YUKLENIYOR=false,SONHATA=null,KONTROL=null;
+/* analiz dosyası: şifre çözüldükten sonra gzip'li JSON */
+async function analizAc(d){if(!d||!d.gz)return d;
+  if(typeof DecompressionStream==="undefined")throw new Error("eski");
+  const akis=new Blob([b64(d.gz)]).stream().pipeThrough(new DecompressionStream("gzip"));
+  return JSON.parse(await new Response(akis).text())}
 async function al(yol){const r=await fetch(yol+"?t="+Date.now(),{cache:"no-store"});if(!r.ok){const e=new Error("HTTP "+r.status);e.status=r.status;throw e}return r.json()}
 function siraOf(ar){const m=String(ar||"").match(/(\d{2})\.(\d{2})\.(\d{4})/);return m?+(m[3]+m[2]+m[1]):0}
 async function yenile(sessiz){
   if(YUKLENIYOR)return;YUKLENIYOR=true;if(!sessiz)ciz();
   const L=erisimler();let hata=null;
   try{SON=await al("veri/sonuclar.json")}catch(e){if(!SON)SON={haftalar:{}};hata="Sonuçlar şu an alınamadı."}
-  await Promise.all(L.map(async e=>{try{const d=await coz(await al("veri/e/"+e.id+".json"),e.k);VERI[e.id]=d;e.ad=d.baslik||e.ad;e.yayin=d.yayin;e.durum="ok"}
-    catch(err){e.durum=err.status===404?"yok":err.message==="sifre"?"sifre":"hata";if(err.status===404||err.message==="sifre")delete VERI[e.id]}}));
+  await Promise.all(L.map(async e=>{let kd;
+    try{const d=await coz(await al("veri/e/"+e.id+".json"),e.k);VERI[e.id]=d;e.ad=d.baslik||e.ad;e.yayin=d.yayin;kd="ok"}
+    catch(err){kd=err.status===404?"yok":err.message==="sifre"?"sifre":"hata";if(err.status===404||err.message==="sifre")delete VERI[e.id]}
+    let ad;try{ANALIZ[e.id]=await analizAc(await coz(await al("veri/a/"+e.id+".json"),e.k));ad="ok"}
+    catch(err){ad=err.status===404?"yok":err.message==="sifre"?"sifre":"hata";if(err.status===404||err.message==="sifre")delete ANALIZ[e.id]}
+    e.durum=kd==="ok"||ad==="ok"?"ok":kd==="yok"&&ad!=="yok"?ad:kd}));
   erisimKaydet(L);KONTROL=new Date();
   const eski=JSON.stringify(W);W=kur();YUKLENIYOR=false;SONHATA=hata;
   if(!sessiz||JSON.stringify(W)!==eski)ciz();else $("#alt").innerHTML=altSatir();
@@ -191,6 +229,9 @@ function kur(){const W2={};
   Object.values(VERI).forEach(d=>(d.haftalar||[]).forEach(h=>{const id=h.aralik||h.ad;if(!id)return;
     const w=W2[id]=W2[id]||{id,ad:h.aralik||h.ad,aralik:h.aralik||"",maclar:h.maclar||[],kuponlar:[],sira:siraOf(h.aralik)||0,yS:h.sonuclar,yI:h.ikramiye};
     (h.kuponlar||[]).forEach(k=>{if(!w.kuponlar.find(x=>x.ad===k.ad))w.kuponlar.push({ad:k.ad||"Kupon",kolonlar:(k.kolonlar||[]).filter(c=>/^[1X2]{15}$/.test(c))})})}));
+  Object.values(ANALIZ).forEach(d=>(d.haftalar||[]).forEach(h=>{const id=h.aralik;if(!id)return;
+    const bas=String(id).slice(0,10),var_=Object.keys(W2).find(k=>k===id||k.slice(0,10)===bas);
+    if(!var_)W2[id]={id,ad:id,aralik:id,maclar:(h.maclar||[]).map(m=>m.kisa||""),kuponlar:[],sira:siraOf(id)||0}}));
   Object.values(W2).forEach(w=>{const r=sonucBul(w.aralik);
     if(r&&r.maclar&&r.maclar.length>=15){w.sonuclar=r.maclar.slice(0,15).map(m=>m.sonuc||null);w.durum=r.maclar.map(m=>m.durum||"");w.tarih=r.maclar.map(m=>m.tarih||"");
       w.ikramiye={};(r.ikramiye||[]).forEach(x=>{w.ikramiye[x.bilen]=x.kazanc});w.guncel=r.guncel}
@@ -224,7 +265,9 @@ function ciz(){
   $("#alt").innerHTML=w?`<span>${esc(w.aralik||"")}</span><span>${kuponlar(w).length} ekip · ${kuponlar(w).reduce((a,k)=>a+k.kolonlar.length,0)} kolon</span><span>${durumMetni()}</span>`:`<span>${durumMetni()}</span>`;
   const a=$("#ana");
   if(!w){a.innerHTML=bosEkran();return}
-  a.innerHTML=SEKME==="ihtimal"?ihtimalEkran(w):SEKME==="kolon"?kolonEkran(w):SEKME==="arsiv"?arsivEkran():takipEkran(w);
+  if(["takip","ihtimal","kolon"].includes(SEKME)&&!kuponlar(w).length){a.innerHTML=`<div class="card empty"><b>Bu hafta oynanmış kolon yok</b>Kolonlar oynandıktan sonra burada görünür. Haftanın analizine <b>Analiz</b> menüsünden bakabilirsin.</div>`;return}
+  a.innerHTML=SEKME==="ihtimal"?ihtimalEkran(w):SEKME==="kolon"?kolonEkran(w):SEKME==="arsiv"?arsivEkran():SEKME==="analiz"?analizEkran(w):takipEkran(w);
+  if(SEKME==="analiz")analizSonra();
 }
 function bosEkran(){const L=erisimler();
   if(YUKLENIYOR&&!Object.keys(W).length)return `<div class="card empty"><b>Yükleniyor…</b>Kolonlar ve sonuçlar getiriliyor.</div>`;
@@ -359,6 +402,53 @@ function arsivEkran(){
         <div>${dur==="bitti"&&s?`<span class="k k${s}" style="width:30px;height:28px">${s}</span>`:'<span class="pill warn">oynanıyor</span>'}</div></div>`}).join(""):'<div class="small muted">Henüz başlayan maç yok.</div>'}
       ${bek?`<div class="small muted" style="margin-top:8px">${bek} maç henüz başlamadı.</div>`:""}</div>`}
 
+/* ---------- Analiz (bilgisayardaki Analiz sekmesinden gönderilen; burada sadece okunur, hiçbir şey geri gitmez) */
+let ASEC=null,ASEK="ozet";
+function analizBul(w){if(!w)return null;const bas=String(w.aralik||w.id).slice(0,10);let en=null;
+  Object.values(ANALIZ).forEach(d=>(d.haftalar||[]).forEach(h=>{if((h.aralik===w.aralik||String(h.aralik).slice(0,10)===bas)&&(!en||String(h.yayin)>String(en.yayin)))en=h}));return en}
+const yuz3=a=>a?a.map(v=>Math.round(v)).join(" / "):"—";
+const oran3=a=>a?a.map(v=>v==null?"–":(+v).toFixed(2).replace(".",",")).join(" · "):"—";
+function cubuk(p){if(!p)return "";const t=p.reduce((a,b)=>a+(+b||0),0)||1;return `<div class="bar" style="height:7px">${p.map((v,k)=>`<i style="width:${100*v/t}%;background:var(--${["c1","cx","c2"][k]})"></i>`).join("")}</div>`}
+function formK(f){return f&&/\d/.test(f)?`<span class="small">${esc(f)}</span>`:f?[...f].slice(0,6).map(c=>`<span class="k ${c==="G"?"k1":c==="B"?"kX":"k2"}" style="min-width:18px;height:18px;font-size:11px">${esc(c)}</span>`).join(" "):'<span class="muted">—</span>'}
+function analizEkran(w){const A=analizBul(w);
+  if(!A){const sorun=Object.keys(ANALIZ).length===0&&typeof DecompressionStream==="undefined";
+    return `<div class="card empty"><b>Bu hafta için analiz yok</b>${sorun?"Bu telefonun tarayıcısı analiz dosyasını açamıyor; tarayıcıyı/telefonu güncellemek gerekiyor.":"Analiz, bilgisayardaki Toto Masası'nda <b>Analiz → 📱 Telefona gönder</b> ile buraya gelir."}</div>`}
+  if(ASEC!=null&&A.maclar[ASEC])return analizDetay(w,A,ASEC);
+  return `<div class="card"><h2>Analiz <span class="s">gönderildi ${esc(A.yayin||"")}</span></h2>
+    <div class="small muted" style="margin-bottom:6px">Bilgisayardaki analizden. Sadece incelemek için; buradan bir şey değiştirilemez. Sonuç % = kanıt tahmini.</div>
+    ${A.maclar.map((m,i)=>`<button class="amac" data-am="${i}"><span class="no">${m.no||i+1}</span><span style="min-width:0"><b>${esc(m.kisa||"")}</b><span class="small muted" style="display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(m.ev)} – ${esc(m.dep)}</span>${cubuk(m.sonuc||m.piyasa)}</span>
+      <span class="sag"><b>${yuz3(m.sonuc)}</b><span class="small muted" style="display:block">${esc(m.kat||"")}${(m.surpriz||[]).length?` · sürpriz ${m.surpriz.map(o=>`<span class="k k${esc(o)}" style="min-width:16px;height:16px;font-size:10px">${esc(o)}</span>`).join("")}`:""}</span></span></button>`).join("")}</div>`}
+function analizDetay(w,A,i){const m=A.maclar[i],adlar=A.sekme_adlari&&A.sekme_adlari.length?A.sekme_adlari:[["ozet","Özet"]];
+  if(!adlar.find(x=>x[0]===ASEK))ASEK=adlar[0][0];
+  const uy=m.uyari||[];
+  return `<div class="row"><button class="btn" data-ageri="1">‹ Maçlar</button><div class="spacer" style="flex:1"></div>
+      <button class="btn" data-anext="-1" ${i===0?"disabled":""} aria-label="Önceki maç">‹</button><button class="btn" data-anext="1" ${i>=A.maclar.length-1?"disabled":""} aria-label="Sonraki maç">›</button></div>
+    <div class="card"><h2>${m.no||i+1}. ${esc(m.ev)} – ${esc(m.dep)}</h2>
+      <div class="small muted" style="margin:-6px 0 10px">${esc(m.lig||"")}${m.tarih?" · "+esc(m.tarih):""}${m.claude?` · Claude: ${esc(new Date(m.claude.zaman).toLocaleString("tr-TR",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"}))} ${esc(m.claude.asama||"")}`:""}</div>
+      <div class="tiles" style="margin-bottom:10px"><div class="tile"><div class="l">Sonuç % (kanıt)</div><div class="v" style="font-size:19px">${yuz3(m.sonuc)}</div><div class="small muted">${esc(m.kat||"")}${m.kanit?" · kanıt":""}${m.ayr>=8?` · <b style="color:var(--warn)">⚡ piyasadan ${m.ayr} puan ayrışıyor</b>`:""}</div></div>
+        <div class="tile"><div class="l">Piyasa %</div><div class="v" style="font-size:19px">${yuz3(m.piyasa)}</div><div class="small muted">kalabalık ${yuz3(m.kalabalik)}</div></div></div>
+      <div class="akv">
+        <span class="l">İddaa</span><span class="num">${oran3(m.iddaa)}${m.iddaa_acilis?` <span class="small muted">(açılış ${oran3(m.iddaa_acilis)})</span>`:""}</span>
+        <span class="l">Yabancı</span><span class="num">${oran3(m.yabanci)}${m.yabanci_acilis?` <span class="small muted">(açılış ${oran3(m.yabanci_acilis)})</span>`:""}${m.yabanci_kaynak?` <span class="small muted">${esc(m.yabanci_kaynak)}</span>`:""}</span>
+        <span class="l">Form</span><span>${formK((m.form||[])[0])}<br>${formK((m.form||[])[1])}</span>
+        <span class="l">Eksik</span><span>${m.eksik?`${m.eksik[0]} · ${m.eksik[1]}`:"—"}</span>
+        <span class="l">Sürpriz</span><span>${(m.surpriz||[]).map(o=>`<span class="k k${esc(o)}">${esc(o)}</span>`).join(" ")||'<span class="muted">—</span>'}</span>
+      </div>
+      ${uy.length?`<details style="margin-top:10px"><summary class="small"><b>⚠ ${uy.length} dikkat noktası</b></summary><div class="small" style="margin-top:6px">${uy.map(esc).join("<br>")}</div></details>`:""}</div>
+    <div class="asekler">${adlar.map(([k,a])=>`<button class="asek ${ASEK===k?"on":""}" data-asek="${esc(k)}">${esc(a)}</button>`).join("")}</div>
+    <div class="card az" id="azIc">${(m.sekmeler||{})[ASEK]||'<div class="muted small">Bu bölümde veri yok.</div>'}</div>`}
+/* gelen içerik bilgisayarın ürettiği HTML; yine de çalıştırılabilir hiçbir şey bırakılmaz, tablolar kaydırılabilir yapılır */
+function analizSonra(){const k=$("#azIc");if(!k)return;
+  k.querySelectorAll("script,style,iframe,object,embed,form,button,input,textarea,select").forEach(e=>e.remove());
+  k.querySelectorAll("*").forEach(e=>[...e.attributes].forEach(a=>{const n=a.name.toLowerCase();if(n.startsWith("on")||(n==="href"||n==="src")&&!/^https:\/\//i.test(a.value))e.removeAttribute(a.name)}));
+  k.querySelectorAll("a[href]").forEach(a=>{a.target="_blank";a.rel="noopener noreferrer"});
+  k.querySelectorAll("table").forEach(t=>{if(!t.parentElement.classList.contains("tbl-wrap")){const d=document.createElement("div");d.className="tbl-wrap";t.replaceWith(d);d.appendChild(t)}})}
+document.addEventListener("click",e=>{const t=e.target.closest("[data-am],[data-ageri],[data-asek],[data-anext]");if(!t)return;
+  if(t.dataset.am!=null){ASEC=+t.dataset.am;ciz();window.scrollTo(0,0)}
+  else if(t.dataset.ageri){const i=ASEC;ASEC=null;ciz();const b=document.querySelector(`[data-am="${i}"]`);if(b)b.scrollIntoView({block:"center"})}
+  else if(t.dataset.anext){const A=analizBul(hafta());const n=ASEC+ +t.dataset.anext;if(A&&A.maclar[n]){ASEC=n;ciz();window.scrollTo(0,0)}}
+  else if(t.dataset.asek){ASEK=t.dataset.asek;const y=window.scrollY;ciz();window.scrollTo(0,Math.min(y,($(".asekler")||{}).offsetTop||0))}});
+
 /* ---------- etkileşim */
 document.addEventListener("click",async e=>{
   const t=e.target.closest("button,.li");if(!t)return;
@@ -370,7 +460,7 @@ document.addEventListener("click",async e=>{
   if(t.id==="senBtn"){const w=hafta(),son=secim(w),K=secili(w);t.disabled=true;t.textContent="Hesaplanıyor…";setTimeout(()=>{SEN[senaryoAnahtar(w,son)]=senaryoHesapla(K,son);ciz()},30);return}
   if(t.classList.contains("sb")){const w=hafta(),sec=secim(w),i=+t.dataset.i,o=t.dataset.o;sec[i]=sec[i]===o?null:o;const y=window.scrollY;ciz();window.scrollTo(0,y);return}
 });
-$("#haftaSec").onchange=e=>{AKTIF=e.target.value;ls("cepHafta",AKTIF);ciz()};
+$("#haftaSec").onchange=e=>{ASEC=null;AKTIF=e.target.value;ls("cepHafta",AKTIF);ciz()};
 $("#yenileBtn").onclick=()=>{yenile(false);toast("Yenileniyor…")};
 $("#ayarBtn").onclick=()=>ayarAc();
 document.addEventListener("change",e=>{if(e.target.id==="filtre"){FILTRE=e.target.value;ciz()}});
