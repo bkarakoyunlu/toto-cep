@@ -1,5 +1,5 @@
 {
-"guncel": "2026-10-31 15:18",
+"guncel": "2026-10-31 16:19",
 "kaynak": "nesine.com/sportoto",
 "haftalar": {
 "30.10.2026 - 02.11.2026": {
@@ -15,15 +15,15 @@
 "no": 2,
 "tarih": "31.10.2026 13:30",
 "ad": "Erzurumspor FK-Çorum FK",
-"durum": "90+179' / 1-3",
+"durum": "Bitti / 1-3",
 "sonuc": "2"
 },
 {
 "no": 3,
 "tarih": "31.10.2026 16:00",
 "ad": "Kocaelispor-Çaykur Rizespor A.Ş.",
-"durum": "",
-"sonuc": null
+"durum": "45+154' / 0-0",
+"sonuc": "X"
 },
 {
 "no": 4,
@@ -78,8 +78,8 @@
 "no": 11,
 "tarih": "31.10.2026 15:30",
 "ad": "Chelsea-Manchester United",
-"durum": "",
-"sonuc": null
+"durum": "D.A. / 0-0",
+"sonuc": "X"
 },
 {
 "no": 12,
@@ -111,7 +111,7 @@
 }
 ],
 "ikramiye": [],
-"guncel": "2026-10-31 15:18"
+"guncel": "2026-10-31 16:19"
 },
 "23.10.2026 - 27.10.2026": {
 "maclar": [
