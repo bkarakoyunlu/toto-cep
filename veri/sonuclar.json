@@ -1,5 +1,5 @@
 {
-"guncel": "2026-11-02 21:32",
+"guncel": "2026-11-02 22:38",
 "kaynak": "nesine.com/sportoto",
 "haftalar": {
 "30.10.2026 - 02.11.2026": {
@@ -64,7 +64,7 @@
 "no": 9,
 "tarih": "02.11.2026 20:00",
 "ad": "Gençlerbirliği-Alanyaspor",
-"durum": "90+166' / 4-0",
+"durum": "Bitti / 5-0",
 "sonuc": "1"
 },
 {
@@ -110,8 +110,29 @@
 "sonuc": "1"
 }
 ],
-"ikramiye": [],
-"guncel": "2026-11-02 21:32"
+"ikramiye": [
+{
+"bilen": 15,
+"adet": 4,
+"kazanc": 10185803.5
+},
+{
+"bilen": 14,
+"adet": 114,
+"kazanc": 204226.63
+},
+{
+"bilen": 13,
+"adet": 2216,
+"kazanc": 10506.24
+},
+{
+"bilen": 12,
+"adet": 22787,
+"kazanc": 1277.14
+}
+],
+"guncel": "2026-11-02 22:38"
 },
 "23.10.2026 - 27.10.2026": {
 "maclar": [
