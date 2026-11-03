@@ -1,7 +1,118 @@
 {
-"guncel": "2026-11-02 22:38",
+"guncel": "2026-11-03 23:25",
 "kaynak": "nesine.com/sportoto",
 "haftalar": {
+"03.11.2026 - 06.11.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "03.11.2026 20:45",
+"ad": "Galatasaray A.Ş.-Stuttgart",
+"durum": "Bitti / 2-0",
+"sonuc": "1"
+},
+{
+"no": 2,
+"tarih": "03.11.2026 20:45",
+"ad": "Shakhtar Donetsk-Sporting Lizbon",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+},
+{
+"no": 3,
+"tarih": "03.11.2026 23:00",
+"ad": "Atletico Madrid-Bayern Münih",
+"durum": "45+158' / 0-0",
+"sonuc": "X"
+},
+{
+"no": 4,
+"tarih": "03.11.2026 23:00",
+"ad": "Barcelona-Aston Villa",
+"durum": "45+157' / 1-0",
+"sonuc": "1"
+},
+{
+"no": 5,
+"tarih": "03.11.2026 23:00",
+"ad": "Manchester United-AS Roma",
+"durum": "45+158' / 0-2",
+"sonuc": "2"
+},
+{
+"no": 6,
+"tarih": "03.11.2026 23:00",
+"ad": "Villarreal-PSG",
+"durum": "45+158' / 0-4",
+"sonuc": "2"
+},
+{
+"no": 7,
+"tarih": "04.11.2026 20:45",
+"ad": "AEK Athens-Real Madrid",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 8,
+"tarih": "04.11.2026 20:45",
+"ad": "Fenerbahçe A.Ş.-Liverpool",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 9,
+"tarih": "04.11.2026 23:00",
+"ad": "B. Dortmund-Real Betis",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 10,
+"tarih": "04.11.2026 23:00",
+"ad": "Leipzig-Manchester City",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 11,
+"tarih": "04.11.2026 23:00",
+"ad": "Porto-Napoli",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 12,
+"tarih": "04.11.2026 23:00",
+"ad": "RC Lens-Como 1907",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 13,
+"tarih": "04.11.2026 23:00",
+"ad": "Slavia Prag-Arsenal",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 14,
+"tarih": "05.11.2026 23:00",
+"ad": "Celtic-Beşiktaş A.Ş.",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 15,
+"tarih": "05.11.2026 20:45",
+"ad": "Trabzonspor A.Ş.-Freiburg",
+"durum": "",
+"sonuc": null
+}
+],
+"ikramiye": [],
+"guncel": "2026-11-03 23:25"
+},
 "30.10.2026 - 02.11.2026": {
 "maclar": [
 {
