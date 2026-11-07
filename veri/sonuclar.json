@@ -1,5 +1,5 @@
 {
-"guncel": "2026-11-07 01:24",
+"guncel": "2026-11-07 18:25",
 "kaynak": "nesine.com/sportoto",
 "haftalar": {
 "06.11.2026 - 09.11.2026": {
@@ -15,15 +15,15 @@
 "no": 2,
 "tarih": "07.11.2026 13:30",
 "ad": "Eyüpspor-Kocaelispor",
-"durum": "",
-"sonuc": null
+"durum": "Bitti / 0-2",
+"sonuc": "2"
 },
 {
 "no": 3,
 "tarih": "07.11.2026 16:00",
 "ad": "Samsunspor A.Ş.-Konyaspor",
-"durum": "",
-"sonuc": null
+"durum": "Bitti / 1-0",
+"sonuc": "1"
 },
 {
 "no": 4,
@@ -111,7 +111,7 @@
 }
 ],
 "ikramiye": [],
-"guncel": "2026-11-07 01:24"
+"guncel": "2026-11-07 18:25"
 },
 "03.11.2026 - 06.11.2026": {
 "maclar": [
