@@ -1,5 +1,5 @@
 {
-"guncel": "2026-11-07 18:25",
+"guncel": "2026-11-07 22:32",
 "kaynak": "nesine.com/sportoto",
 "haftalar": {
 "06.11.2026 - 09.11.2026": {
@@ -29,15 +29,15 @@
 "no": 4,
 "tarih": "07.11.2026 19:00",
 "ad": "Galatasaray A.Ş.-Amed Sportif Faaliyetler",
-"durum": "",
-"sonuc": null
+"durum": "Bitti / 4-3",
+"sonuc": "1"
 },
 {
 "no": 5,
 "tarih": "07.11.2026 19:00",
 "ad": "Göztepe A.Ş.-Başakşehir FK",
-"durum": "",
-"sonuc": null
+"durum": "Bitti / 1-2",
+"sonuc": "2"
 },
 {
 "no": 6,
@@ -71,8 +71,8 @@
 "no": 10,
 "tarih": "07.11.2026 20:30",
 "ad": "Stuttgart-Werder Bremen",
-"durum": "",
-"sonuc": null
+"durum": "Bitti / 1-0",
+"sonuc": "1"
 },
 {
 "no": 11,
@@ -111,7 +111,7 @@
 }
 ],
 "ikramiye": [],
-"guncel": "2026-11-07 18:25"
+"guncel": "2026-11-07 22:32"
 },
 "03.11.2026 - 06.11.2026": {
 "maclar": [
