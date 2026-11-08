@@ -1,5 +1,5 @@
 {
-"guncel": "2026-11-08 02:02",
+"guncel": "2026-11-08 19:10",
 "kaynak": "nesine.com/sportoto",
 "haftalar": {
 "06.11.2026 - 09.11.2026": {
@@ -43,22 +43,22 @@
 "no": 6,
 "tarih": "08.11.2026 13:30",
 "ad": "Çaykur Rizespor A.Ş.-Erzurumspor FK",
-"durum": "",
-"sonuc": null
+"durum": "Bitti / 2-1",
+"sonuc": "1"
 },
 {
 "no": 7,
 "tarih": "08.11.2026 16:00",
 "ad": "Çorum FK-Fenerbahçe A.Ş.",
-"durum": "",
-"sonuc": null
+"durum": "Bitti / 0-5",
+"sonuc": "2"
 },
 {
 "no": 8,
 "tarih": "08.11.2026 18:30",
 "ad": "Alanyaspor-Trabzonspor A.Ş.",
-"durum": "",
-"sonuc": null
+"durum": "45+174' / 0-2",
+"sonuc": "2"
 },
 {
 "no": 9,
@@ -99,8 +99,8 @@
 "no": 14,
 "tarih": "08.11.2026 14:30",
 "ad": "Napoli-Lazio",
-"durum": "",
-"sonuc": null
+"durum": "Bitti / 1-1",
+"sonuc": "X"
 },
 {
 "no": 15,
@@ -111,7 +111,7 @@
 }
 ],
 "ikramiye": [],
-"guncel": "2026-11-08 02:02"
+"guncel": "2026-11-08 19:10"
 },
 "03.11.2026 - 06.11.2026": {
 "maclar": [
