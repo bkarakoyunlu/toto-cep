@@ -1,5 +1,5 @@
 {
-"guncel": "2026-11-14 04:42",
+"guncel": "2026-11-14 22:56",
 "kaynak": "nesine.com/sportoto",
 "haftalar": {
 "13.11.2026 - 17.11.2026": {
@@ -43,22 +43,22 @@
 "no": 6,
 "tarih": "14.11.2026 20:00",
 "ad": "Gürcistan-Macaristan",
-"durum": "",
-"sonuc": null
+"durum": "Bitti / 0-2",
+"sonuc": "2"
 },
 {
 "no": 7,
 "tarih": "14.11.2026 20:00",
 "ad": "Norveç-Galler",
-"durum": "",
-"sonuc": null
+"durum": "Bitti / 3-1",
+"sonuc": "1"
 },
 {
 "no": 8,
 "tarih": "14.11.2026 22:45",
 "ad": "Portekiz-Danimarka",
-"durum": "",
-"sonuc": null
+"durum": "45+144' / 0-0",
+"sonuc": "X"
 },
 {
 "no": 9,
@@ -111,7 +111,7 @@
 }
 ],
 "ikramiye": [],
-"guncel": "2026-11-14 04:42"
+"guncel": "2026-11-14 22:56"
 },
 "06.11.2026 - 09.11.2026": {
 "maclar": [
