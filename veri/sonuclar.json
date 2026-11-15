@@ -1,5 +1,5 @@
 {
-"guncel": "2026-11-15 02:40",
+"guncel": "2026-11-16 01:06",
 "kaynak": "nesine.com/sportoto",
 "haftalar": {
 "13.11.2026 - 17.11.2026": {
@@ -8,8 +8,8 @@
 "no": 1,
 "tarih": "15.11.2026 22:45",
 "ad": "Fransa-Türkiye",
-"durum": "",
-"sonuc": null
+"durum": "Bitti / 2-1",
+"sonuc": "1"
 },
 {
 "no": 2,
@@ -64,22 +64,22 @@
 "no": 9,
 "tarih": "15.11.2026 22:45",
 "ad": "Belçika-İtalya",
-"durum": "",
-"sonuc": null
+"durum": "Bitti / 4-1",
+"sonuc": "1"
 },
 {
 "no": 10,
 "tarih": "15.11.2026 22:45",
 "ad": "Hırvatistan-Çekya",
-"durum": "",
-"sonuc": null
+"durum": "Bitti / 2-1",
+"sonuc": "1"
 },
 {
 "no": 11,
 "tarih": "15.11.2026 22:45",
 "ad": "İspanya-İngiltere",
-"durum": "",
-"sonuc": null
+"durum": "Bitti / 2-3",
+"sonuc": "2"
 },
 {
 "no": 12,
@@ -111,7 +111,7 @@
 }
 ],
 "ikramiye": [],
-"guncel": "2026-11-15 02:40"
+"guncel": "2026-11-16 01:06"
 },
 "06.11.2026 - 09.11.2026": {
 "maclar": [
