@@ -1,5 +1,5 @@
 {
-"guncel": "2026-11-21 14:49",
+"guncel": "2026-11-21 21:42",
 "kaynak": "nesine.com/sportoto",
 "haftalar": {
 "21.11.2026 - 23.11.2026": {
@@ -8,29 +8,29 @@
 "no": 1,
 "tarih": "21.11.2026 13:30",
 "ad": "Gençlerbirliği-Gaziantep FK A.Ş.",
-"durum": "90+150' / 1-0",
+"durum": "Bitti / 1-0",
 "sonuc": "1"
 },
 {
 "no": 2,
 "tarih": "21.11.2026 16:00",
 "ad": "Amed Sportif Faaliyetler-Çaykur Rizespor A.Ş.",
-"durum": "",
-"sonuc": null
+"durum": "Bitti / 0-2",
+"sonuc": "2"
 },
 {
 "no": 3,
 "tarih": "21.11.2026 16:00",
 "ad": "Galatasaray A.Ş.-Samsunspor A.Ş.",
-"durum": "",
-"sonuc": null
+"durum": "Bitti / 2-1",
+"sonuc": "1"
 },
 {
 "no": 4,
 "tarih": "21.11.2026 19:00",
 "ad": "Kocaelispor-Fenerbahçe A.Ş.",
-"durum": "",
-"sonuc": null
+"durum": "Bitti / 2-2",
+"sonuc": "X"
 },
 {
 "no": 5,
@@ -71,8 +71,8 @@
 "no": 10,
 "tarih": "21.11.2026 20:30",
 "ad": "Schalke 04-Stuttgart",
-"durum": "",
-"sonuc": null
+"durum": "90+144' / 0-0",
+"sonuc": "X"
 },
 {
 "no": 11,
@@ -85,8 +85,8 @@
 "no": 12,
 "tarih": "21.11.2026 20:30",
 "ad": "Newcastle United-Arsenal",
-"durum": "",
-"sonuc": null
+"durum": "90+144' / 1-1",
+"sonuc": "X"
 },
 {
 "no": 13,
@@ -99,8 +99,8 @@
 "no": 14,
 "tarih": "21.11.2026 20:30",
 "ad": "Sevilla-Real Betis",
-"durum": "",
-"sonuc": null
+"durum": "90+139' / 0-0",
+"sonuc": "X"
 },
 {
 "no": 15,
@@ -111,7 +111,7 @@
 }
 ],
 "ikramiye": [],
-"guncel": "2026-11-21 14:49"
+"guncel": "2026-11-21 21:42"
 },
 "13.11.2026 - 17.11.2026": {
 "maclar": [
