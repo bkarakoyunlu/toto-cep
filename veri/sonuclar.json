@@ -1,7 +1,118 @@
 {
-"guncel": "2026-11-23 23:04",
+"guncel": "2026-11-25 03:07",
 "kaynak": "nesine.com/sportoto",
 "haftalar": {
+"24.11.2026 - 28.11.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "24.11.2026 20:45",
+"ad": "Bodo Glimt-LASK",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 2,
+"tarih": "24.11.2026 20:45",
+"ad": "Galatasaray A.Ş.-Aston Villa",
+"durum": "Bitti / 1-0",
+"sonuc": "1"
+},
+{
+"no": 3,
+"tarih": "24.11.2026 23:00",
+"ad": "Arsenal-B. Dortmund",
+"durum": "Bitti / 1-1",
+"sonuc": "X"
+},
+{
+"no": 4,
+"tarih": "24.11.2026 23:00",
+"ad": "Feyenoord-Porto",
+"durum": "Bitti / 0-1",
+"sonuc": "2"
+},
+{
+"no": 5,
+"tarih": "24.11.2026 23:00",
+"ad": "Leipzig-RC Lens",
+"durum": "Bitti / 3-1",
+"sonuc": "1"
+},
+{
+"no": 6,
+"tarih": "24.11.2026 23:00",
+"ad": "Manchester City-Napoli",
+"durum": "Bitti / 2-2",
+"sonuc": "X"
+},
+{
+"no": 7,
+"tarih": "24.11.2026 23:00",
+"ad": "Real Madrid-PSV",
+"durum": "Bitti / 5-1",
+"sonuc": "1"
+},
+{
+"no": 8,
+"tarih": "25.11.2026 23:00",
+"ad": "Atletico Madrid-Viking",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 9,
+"tarih": "25.11.2026 23:00",
+"ad": "Club Brugge-Liverpool",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 10,
+"tarih": "25.11.2026 23:00",
+"ad": "Inter-Stuttgart",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 11,
+"tarih": "25.11.2026 23:00",
+"ad": "PSG-AS Roma",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 12,
+"tarih": "25.11.2026 23:00",
+"ad": "Shakhtar Donetsk-Fenerbahçe A.Ş.",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 13,
+"tarih": "25.11.2026 23:00",
+"ad": "Sporting Lizbon-Manchester United",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 14,
+"tarih": "26.11.2026 20:45",
+"ad": "Beşiktaş A.Ş.-Hapoel Beer Sheva",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 15,
+"tarih": "26.11.2026 23:00",
+"ad": "CSKA Sofya-Trabzonspor A.Ş.",
+"durum": "",
+"sonuc": null
+}
+],
+"ikramiye": [],
+"guncel": "2026-11-25 03:07"
+},
 "21.11.2026 - 23.11.2026": {
 "maclar": [
 {
