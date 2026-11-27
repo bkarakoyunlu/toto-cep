@@ -1,7 +1,118 @@
 {
-"guncel": "2026-11-27 14:27",
+"guncel": "2026-11-27 23:11",
 "kaynak": "nesine.com/sportoto",
 "haftalar": {
+"27.11.2026 - 30.11.2026": {
+"maclar": [
+{
+"no": 1,
+"tarih": "27.11.2026 20:00",
+"ad": "Alanyaspor-Konyaspor",
+"durum": "Bitti / 1-2",
+"sonuc": "2"
+},
+{
+"no": 2,
+"tarih": "27.11.2026 20:00",
+"ad": "Çaykur Rizespor A.Ş.-Kasımpaşa A.Ş.",
+"durum": "Bitti / 3-2",
+"sonuc": "1"
+},
+{
+"no": 3,
+"tarih": "28.11.2026 16:00",
+"ad": "Samsunspor A.Ş.-Gençlerbirliği",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 4,
+"tarih": "28.11.2026 19:00",
+"ad": "Gaziantep FK A.Ş.-Amed Sportif Faaliyetler",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 5,
+"tarih": "29.11.2026 13:30",
+"ad": "Çorum FK-Kocaelispor",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 6,
+"tarih": "29.11.2026 16:00",
+"ad": "Eyüpspor-Başakşehir FK",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 7,
+"tarih": "29.11.2026 19:00",
+"ad": "Fenerbahçe A.Ş.-Erzurumspor FK",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 8,
+"tarih": "30.11.2026 19:00",
+"ad": "Göztepe A.Ş.-Trabzonspor A.Ş.",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 9,
+"tarih": "30.11.2026 21:00",
+"ad": "Beşiktaş A.Ş.-Galatasaray A.Ş.",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 10,
+"tarih": "29.11.2026 17:30",
+"ad": "Freiburg-Leipzig",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 11,
+"tarih": "29.11.2026 21:30",
+"ad": "B. Dortmund-B. Leverkusen",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 12,
+"tarih": "29.11.2026 22:45",
+"ad": "Lyon-Monaco",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 13,
+"tarih": "29.11.2026 15:00",
+"ad": "Everton-Liverpool",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 14,
+"tarih": "29.11.2026 19:30",
+"ad": "Arsenal-Manchester City",
+"durum": "",
+"sonuc": null
+},
+{
+"no": 15,
+"tarih": "29.11.2026 23:00",
+"ad": "Real Sociedad-Sevilla",
+"durum": "",
+"sonuc": null
+}
+],
+"ikramiye": [],
+"guncel": "2026-11-27 23:11"
+},
 "24.11.2026 - 28.11.2026": {
 "maclar": [
 {
